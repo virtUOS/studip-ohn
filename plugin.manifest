@@ -1,0 +1,5 @@
+pluginname=OHN
+pluginclassname=OHNLayout
+origin=virtUOS
+version=0.1a
+studipMinVersion=3.0
