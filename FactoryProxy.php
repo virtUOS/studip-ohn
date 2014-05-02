@@ -33,11 +33,17 @@ class FactoryProxy extends \Flexi_TemplateFactory
             return $template;
         }
         
-        // check if we have an overwritten template
-        try {
-            return $this->orig_factory->open($this->factory_path .'/'. $template);
-        } catch (\Flexi_TemplateNotFoundException $e) {
-            return $this->orig_factory->open($template);
+        
+        if (file_exists($this->factory_path .'/'. $template . '.php')) {
+            $template = $this->factory_path .'/'. $template;
         }
+        
+        // get file
+        $file = $this->get_template_file($template);
+
+        // retrieve handler
+        list($class, $options) = $this->get_template_handler($file);
+
+        return new $class($file, $this, $options);
     }
 }
