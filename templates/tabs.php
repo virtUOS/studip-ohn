@@ -12,7 +12,7 @@ foreach (Navigation::getItem("/")->getSubNavigation() as $path => $nav) {
         <? if ($nav->isVisible()) : ?>
             <? if ($nav->isActive()) : ?>
             <li id="nav_<?= $path1 ?>__<?= $path ?>" class="current"
-                    onMouseOver="jQuery('#tabs2_dropdown').width(jQuery(this).width());jQuery('#tabs2_dropdown').css('left', jQuery(this).offset().left);jQuery('#tabs2_dropdown').slideDown();">
+                    onMouseOver="showSubmenu(this)">
             <? else : ?>
             <li id="nav_<?= $path1 ?>__<?= $path ?>">
             <? endif ?>
@@ -83,6 +83,14 @@ foreach (Navigation::getItem("/")->getSubNavigation() as $path => $nav) {
         }
         i++;
     });
+    
+    function showSubmenu(element) {
+        if (jQuery('#tabs2_dropdown li').length > 0) {
+            jQuery('#tabs2_dropdown').width(jQuery(element).width());
+            jQuery('#tabs2_dropdown').css('left', jQuery(element).offset().left);
+            jQuery('#tabs2_dropdown').slideDown();
+        }
+    }
 </script>
 <ul id="tabs2_dropdown" role="navigation" style="display: none;" onClick="jQuery($this).blindUp()">
     <? $subnavigation = $navigation->activeSubNavigation() ?>
