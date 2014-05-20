@@ -25,5 +25,7 @@ class OHNLayout extends StudIPPlugin implements SystemPlugin {
 
         PageLayout::addScript($this->getPluginURL() . '/assets/application.js');
         PageLayout::addStylesheet($this->getPluginURL() . '/assets/style.css');
+
+        $GLOBALS['OHN_IMAGES'] = $this->getPluginURL() .'/assets/images';
     }
 }
