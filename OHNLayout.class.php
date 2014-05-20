@@ -22,5 +22,8 @@ class OHNLayout extends StudIPPlugin implements SystemPlugin {
             $GLOBALS['template_factory'], 
             realpath($this->getPluginPath() . '/templates')
         );
+
+        PageLayout::addScript($this->getPluginURL() . '/assets/application.js');
+        PageLayout::addStylesheet($this->getPluginURL() . '/assets/style.css');
     }
 }
