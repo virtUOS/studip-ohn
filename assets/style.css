@@ -1,1 +1,212 @@
 /* CSS */ 
+
+@import url("foundation.css");
+@import url("main.css");
+
+body {
+	background-image: none !important;
+	background-color: #fff !important;
+}
+
+#layout_wrapper {
+	max-width: 63.75em;
+}
+
+#layout_page {
+	margin: 15px 0px;
+}
+
+#layout_content {
+	padding: 12px;
+}
+
+/* HEADER */
+
+/* studip Header */
+
+#flex-header {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 9998;
+	width: 100%;
+	display: none !important;
+	box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+}
+
+#barTopStudip {
+	display: none;
+}
+
+#openStudipNavigation {
+	position: absolute;
+	top: 15px;
+	left: 25px;
+	min-width: 30px;
+}
+
+#openStudipNavigation .navigationButton {
+	width: 100%;
+	height: 4px;
+	margin: 5px 0px;
+	background: #efefef;
+	border-radius: 3px;
+}
+
+#openStudipNavigation:hover #flex-header {
+display: block !important;
+}
+
+#openStudipNavigation:hover .navigationButton {
+	background-color: #aaa;
+}
+
+#header {
+	
+}
+
+/* OHN Header */
+
+#barBottomLeft, #barBottommiddle, #barBottomright {
+	background-color: #8DCEE6; /* #E3F3F8 */
+	color: #222;
+}
+
+#barBottommiddle:before {
+	background-color: transparent;
+	background-image: none;
+}
+
+#barBottomright:before {
+	background-image: none;
+}
+
+#barBottomright a, #layout_footer a {
+	color: #222;
+}
+
+input.quicksearchbox {
+	height: 19px;
+}
+
+#notification_marker {
+	height: 19px;
+}
+
+#barBottomContainer {
+	box-shadow: none;
+}
+
+#tabs {
+	position: relative;
+}
+
+#tabs li {
+	background-color: #efefef; /* #E3F3F8; */
+	border: 1px solid #ddd;
+}
+
+#tabs li:hover {
+	background-color: #E3F3F8;
+}
+
+#tabs li:last-child {
+	border: 1px solid #ddd;
+}
+
+#tabs a, #tabs span.quiet {
+	color: #222;
+}
+
+#tabs2 {
+	background-color: #FFF; /* #EFEFEF */
+	border-left: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+	border-top: 1px solid #ddd;
+	margin-top: -1px;
+}
+
+#layout_container {
+	background-color: #FFF; /* #EFEFEF */
+	border-left: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+}
+
+#tabs li.current, #tabs li.current:hover {
+	background-color: #FFF; /* #EFEFEF */
+	background-image: none;
+	border-top: 1px solid #ddd;
+}
+
+#tabs li.current {
+	border-bottom: 1px solid #fff !important;
+}
+
+/* ##### MOOC ##### */
+
+section#courseware ol.active-subchapter {
+	z-index: 9999;
+}
+
+.title h1 {
+	margin: 0;
+}
+
+section#courseware ol.chapters {
+	width: 15em !important;
+}
+
+section#courseware section.active-section {
+	width: 46em !important;
+}
+
+dl, menu, ol, ul {
+	margin: 0;
+}
+
+section#courseware section.active-section {
+	margin-top: 40px;
+}
+
+
+/* ##### SIDEBAR ##### */
+
+#layout_sidebar, #layout_infobox, .infobox, .infobox-img > div {
+	width: 100% !important;
+}
+
+#layout_sidebar {
+	padding: 12px 0px 0px 12px;
+	border: none;
+}
+
+.infobox {
+	border: none;
+	background-color: #EEF5DD;
+	margin-bottom: 0px;
+}
+
+table.infobox td, .infoboxrahmen, table tr.even, table tr.alt, table tr:nth-of-type(2n), table tr.even, table tr.alt, table tr, table.infobox td.infobox-img, table {
+	background: transparent;
+}
+
+table {
+	border: none;
+}
+
+/* ##### FOOTER ##### */
+
+#layout_footer {
+	background-color: #8DCEE6;
+	border: none;
+}
+
+#footer {
+	margin: 0px 10px !important;
+	line-height: 25px;
+}
+
+#barBottomright ul, #layout_footer ul {
+	line-height: normal;
+}

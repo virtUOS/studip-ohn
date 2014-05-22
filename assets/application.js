@@ -1,5 +1,7 @@
 (function ($) {
 
-    // JS
+    $("#openStudipNavigation").click(function() {
+	    alert("test");
+    });
 
 }(jQuery));
