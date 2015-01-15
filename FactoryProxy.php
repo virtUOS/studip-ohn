@@ -32,9 +32,9 @@ class FactoryProxy extends \Flexi_TemplateFactory
         if (!is_string($template)) {
             return $template;
         }
-        
-        
-        if (file_exists($this->factory_path .'/'. $template . '.php')) {
+
+        if (file_exists($this->factory_path .'/'. $template . '.php') ||
+                file_exists($this->factory_path .'/'. $template)) {
             $template = $this->factory_path .'/'. $template;
         }
         

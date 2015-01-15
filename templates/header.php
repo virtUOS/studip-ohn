@@ -105,7 +105,7 @@
 	
 	<h1 class="logo_slim">
 		<a href="#">
-			<img src="logo.png" alt="Logo" />
+			<img src="<?= $GLOBALS['OHN_IMAGES'] ?>/header-logo.png" alt="Logo" />
 		</a>
 	</h1>
   
