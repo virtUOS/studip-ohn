@@ -9,15 +9,19 @@ body {
 }
 
 #layout_wrapper {
-	max-width: 63.75em;
+	min-width: 980px;
+	max-width: 1200px;
 }
 
 #layout_page {
-	margin: 15px 0px;
 }
 
 #layout_content {
-	padding: 12px;
+	margin: 0px;
+}
+
+h1, h2, h3, h4 {
+	border: none;
 }
 
 /* HEADER */
@@ -61,8 +65,59 @@ display: block !important;
 	background-color: #aaa;
 }
 
-#header {
-	
+#header_slim {
+	padding: 10px 0px;
+}
+
+#header_slim .logo_slim {
+	float: left;
+	margin: 0px 10px 0px 13px;
+	padding-right: 20px;
+	font-size: 0.9em;
+	position: relative;
+	height: 35px;
+}
+
+#header_slim .logo_slim img {
+	height: 30px;
+}
+
+#header_slim .logo_slim:before {
+	content: "";
+  display: block;
+  height: 35px;
+  position: absolute;
+  right: 3px;
+  top: 0;
+  width: 1px;
+  background-image: linear-gradient(180deg, rgba(200, 200, 200, 0) 0%, #c8c8c8 50%, rgba(200, 200, 200, 0));
+}
+
+#header_slim .logo_slim:after {
+	content: "";
+  display: block;
+  height: 35px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 1px;
+}
+
+#header_slim h2 {
+	color: #646464;
+  display: block;
+  float: left;
+  font-size: 0.9em;
+  font-weight: 600;
+  letter-spacing: 0;
+  margin-bottom: 0;
+  margin-top: 9px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-shadow: 0 1px 0 #fff;
+  text-transform: none;
+  white-space: nowrap;
+  width: 700px;
 }
 
 /* OHN Header */
@@ -97,17 +152,23 @@ input.quicksearchbox {
 	box-shadow: none;
 }
 
+.tab-icon {
+	width: 16px !important;
+	height: 16px !important;	
+}
+
 #tabs {
 	position: relative;
 }
 
 #tabs li {
-	background-color: #efefef; /* #E3F3F8; */
-	border: 1px solid #ddd;
+	background-color: #fff; /* #E3F3F8; */
+	border: none;
 }
 
-#tabs li:hover {
-	background-color: #E3F3F8;
+#tabs li:hover, #tabs li:hover a {
+	color: #333;
+	background: transparent !important;
 }
 
 #tabs li:last-child {
@@ -115,28 +176,24 @@ input.quicksearchbox {
 }
 
 #tabs a, #tabs span.quiet {
-	color: #222;
+	color: #555;
+	font-size: 14px;
+	padding: 5px 13px 7px;
 }
 
 #tabs2 {
 	background-color: #FFF; /* #EFEFEF */
-	border-left: 1px solid #ddd;
-	border-right: 1px solid #ddd;
-	border-top: 1px solid #ddd;
 	margin-top: -1px;
 }
 
 #layout_container {
 	background-color: #FFF; /* #EFEFEF */
-	border-left: 1px solid #ddd;
-	border-right: 1px solid #ddd;
-	border-bottom: 1px solid #ddd;
 }
 
-#tabs li.current, #tabs li.current:hover {
-	background-color: #FFF; /* #EFEFEF */
+#tabs li.current a, #tabs li.current a:hover {
+	background-color: #666666; /* #EFEFEF */
+	color: #fff;
 	background-image: none;
-	border-top: 1px solid #ddd;
 }
 
 #tabs li.current {
