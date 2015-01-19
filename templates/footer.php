@@ -3,7 +3,7 @@
 ?>
     <!-- Beginn Footer -->
     <div id="layout_footer">
-      <ul>
+      <ul class="footer_navigation_main">
       <? if (Navigation::hasItem('/footer')) : ?>
       <? foreach (Navigation::getItem('/footer') as $nav) : ?>
           <? if ($nav->isVisible()) : ?>
@@ -20,5 +20,36 @@
       <? endforeach ?>
       <? endif ?>
       </ul>
+      
+      <div class="footer_about">
+	      <div class="footer_logos">
+		      <a href="#">
+		      	<img src="<?= $GLOBALS['OHN_IMAGES'] ?>/ohn_logo.png" alt="OHN Logo" />
+		      </a>
+		      
+		      <a href="#">
+		      	<img src="<?= $GLOBALS['OHN_IMAGES'] ?>/nds_logo.png" alt="Niedersachsen Logo" />
+		      </a>
+	      </div>
+	      
+	      <p>Die Kosten für die Entwicklung des Portals und die Teilnahme an den Online-Studienvorbereitungskursen des OHN-KursPortals trägt das Niedersächsische Ministerium für Wissenschaft und Kultur.</p>
+				<div class="clear"></div>
+      </div>
+      
+      <div class="footer_navigation_sec">
+	      <ul>
+		      <li>
+			      <a href="#">
+				    	Nutzungsbedingungen 
+			      </a>
+		      </li>
+		      <li>
+			      <a href="#">
+				      Datenschutz
+			      </a>
+		      </li>
+	      </ul>
+      </div>
+      
     </div>
     <!-- Ende Footer -->

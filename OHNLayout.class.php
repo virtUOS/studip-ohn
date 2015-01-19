@@ -30,30 +30,5 @@ class OHNLayout extends StudIPPlugin implements SystemPlugin {
         PageLayout::addStylesheet($this->getPluginURL() . '/assets/bootstrap/css/bootstrap.min.css');
 
         $GLOBALS['OHN_IMAGES'] = $this->getPluginURL() .'/assets/images';
-
-        $navigation = new Navigation('Impressum',
-                PluginEngine::getURL($this, array(), 'index/impressum', true));
-
-        Navigation::insertItem('/footer/impressum', $navigation);
-
-        Navigation::removeItem('/footer/siteinfo');
-        Navigation::removeItem('/footer/blog');
-        Navigation::removeItem('/footer/sitemap');
-        Navigation::removeItem('/footer/studip');
-    }
-
-    public function perform($unconsumed_path)
-    {
-        require_once 'vendor/trails/trails.php';
-        require_once 'app/controllers/studip_controller.php';
-        require_once 'app/controllers/authenticated_controller.php';
-
-        $dispatcher = new Trails_Dispatcher(
-            $this->getPluginPath(),
-            rtrim(PluginEngine::getLink($this, array(), null), '/'),
-            NULL
-        );
-        $dispatcher->plugin = $this;
-        $dispatcher->dispatch($unconsumed_path);
     }
 }
