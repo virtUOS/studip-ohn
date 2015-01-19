@@ -192,9 +192,13 @@ input.quicksearchbox {
 }
 
 #tabs li.current a, #tabs li.current a:hover {
-	background-color: #666666; /* #EFEFEF */
+	background-color: #666666 !important; /* #EFEFEF */
 	color: #fff;
-	background-image: none;
+}
+
+#tabs li.current a, #tabs li.current:hover {
+	background-color: #666666 !important; /* #EFEFEF */
+	color: #fff;
 }
 
 #tabs li.current {
