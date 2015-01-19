@@ -24,10 +24,7 @@ class OHNLayout extends StudIPPlugin implements SystemPlugin {
         );
 
         PageLayout::addScript($this->getPluginURL() . '/assets/application.js');
-        PageLayout::addScript($this->getPluginURL() . '/assets/jquery-1.11.2.min.js');
-        PageLayout::addScript($this->getPluginURL() . '/assets/bootstrap/js/bootstrap.min.js');
         PageLayout::addStylesheet($this->getPluginURL() . '/assets/style.css');
-        PageLayout::addStylesheet($this->getPluginURL() . '/assets/bootstrap/css/bootstrap.min.css');
 
         $GLOBALS['OHN_IMAGES'] = $this->getPluginURL() .'/assets/images';
         
@@ -83,5 +80,6 @@ class OHNLayout extends StudIPPlugin implements SystemPlugin {
         );
         $dispatcher->plugin = $this;
         $dispatcher->dispatch($unconsumed_path);
+
     }
 }
