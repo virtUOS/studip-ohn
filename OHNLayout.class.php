@@ -30,12 +30,40 @@ class OHNLayout extends StudIPPlugin implements SystemPlugin {
         PageLayout::addStylesheet($this->getPluginURL() . '/assets/bootstrap/css/bootstrap.min.css');
 
         $GLOBALS['OHN_IMAGES'] = $this->getPluginURL() .'/assets/images';
+        
+        ##add Footer Navigation
+        $navigation = new Navigation('Über uns',
+                PluginEngine::getURL($this, array(), 'index/ueberuns', true));
+        Navigation::insertItem('/footer/ueberuns', $navigation,null );
+
+        $navigation = new Navigation('Neuigkeiten', 'http://www.offene-hochschule-niedersachsen.de/site/offene-hochschule/aktuelles/news');
+        Navigation::insertItem('/footer/neugikeiten', $navigation,null );
+
+        $navigation = new Navigation('FAQ',
+                PluginEngine::getURL($this, array(), 'index/faq', true));
+        Navigation::insertItem('/footer/faq', $navigation,null );
+
+        $navigation = new Navigation('Kontakt',
+                PluginEngine::getURL($this, array(), 'index/kontakt', true));
+        Navigation::insertItem('/footer/kontakt', $navigation,null );
+
 
         $navigation = new Navigation('Impressum',
                 PluginEngine::getURL($this, array(), 'index/impressum', true));
+        Navigation::insertItem('/footer/impressum', $navigation,null );
 
-        Navigation::insertItem('/footer/impressum', $navigation);
+        $navigation = new Navigation('Nutzungsbedingungen',
+                PluginEngine::getURL($this, array(), 'index/nutzungsbedingungen', true));
+        Navigation::insertItem('/footer/nutzungsbedingungen', $navigation,null );  
 
+         $navigation = new Navigation('Datenschutz',
+                PluginEngine::getURL($this, array(), 'index/datenschutz', true));
+        Navigation::insertItem('/footer/datenschutz', $navigation,null );              
+        
+        $navigation = new Navigation('facebook', 'https://www.facebook.com/offenehochschuleniedersachsen');
+        Navigation::insertItem('/footer/facebook', $navigation,null );
+
+        ##remove studip Standard navigation
         Navigation::removeItem('/footer/siteinfo');
         Navigation::removeItem('/footer/blog');
         Navigation::removeItem('/footer/sitemap');

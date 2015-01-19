@@ -22,6 +22,36 @@ class IndexController extends StudipController
 
     public function impressum_action()
     {
+
         
     }
+
+    public function kontakt_action()
+    {
+
+        
+    }
+
+    public function faq_action()
+    {
+
+        
+    }
+
+	public function neuigkeiten_action()
+    {
+
+        
+    }
+
+    public function ueberuns_action()
+    {     
+    }
+    public function nutzungsbedingungen_action()
+    {     
+    }
+    public function datenschutz_action()
+    {     
+    }
+
 }
