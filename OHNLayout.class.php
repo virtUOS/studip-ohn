@@ -49,17 +49,7 @@ class OHNLayout extends StudIPPlugin implements SystemPlugin {
                 PluginEngine::getURL($this, array(), 'index/impressum', true));
         Navigation::insertItem('/footer/impressum', $navigation,null );
 
-        $navigation = new Navigation('Nutzungsbedingungen',
-                PluginEngine::getURL($this, array(), 'index/nutzungsbedingungen', true));
-        Navigation::insertItem('/footer/nutzungsbedingungen', $navigation,null );  
-
-         $navigation = new Navigation('Datenschutz',
-                PluginEngine::getURL($this, array(), 'index/datenschutz', true));
-        Navigation::insertItem('/footer/datenschutz', $navigation,null );              
         
-        $navigation = new Navigation('facebook', 'https://www.facebook.com/offenehochschuleniedersachsen');
-        Navigation::insertItem('/footer/facebook', $navigation,null );
-
         ##remove studip Standard navigation
         Navigation::removeItem('/footer/siteinfo');
         Navigation::removeItem('/footer/blog');

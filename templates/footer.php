@@ -32,22 +32,25 @@
 		      </a>
 	      </div>
 	      
-	      <p>Die Kosten fÃ¼r die Entwicklung des Portals und die Teilnahme an den Online-Studienvorbereitungskursen des OHN-KursPortals trÃ¤gt das NiedersÃ¤chsische Ministerium fÃ¼r Wissenschaft und Kultur.</p>
+	      <p>Die Kosten für die Entwicklung des Portals und die Teilnahme an den Online-Studienvorbereitungskursen des OHN-KursPortals trägt das Niedersächsische Ministerium für Wissenschaft und Kultur.</p>
 				<div class="clear"></div>
       </div>
       
       <div class="footer_navigation_sec">
 	      <ul>
 		      <li>
-			      <a href="#">
-				    	Nutzungsbedingungen 
+			      <a href="/studip/plugins.php/ohnlayout/index/nutzungsbedingungen">
+				    	Nutzungsbedingungen
 			      </a>
 		      </li>
 		      <li>
-			      <a href="#">
-				      Datenschutz
+			      <a href="/studip/plugins.php/ohnlayout/index/datenschutz">
+				       Datenschutz 
 			      </a>
 		      </li>
+          <a href="https://www.facebook.com/offenehochschuleniedersachsen">
+            <img src="<?= $GLOBALS['OHN_IMAGES'] ?>/fb-icon.png" alt="facebook" />
+          </a>
 	      </ul>
       </div>
       
