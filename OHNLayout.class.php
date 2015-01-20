@@ -56,12 +56,28 @@ class OHNLayout extends StudIPPlugin implements SystemPlugin {
         Navigation::removeItem('/footer/sitemap');
         Navigation::removeItem('/footer/studip');
 
+        ##Header Navigation
         $navigation = new Navigation('Header', PluginEngine::getLink($this, array(), 'courses/overview'));
         Navigation::insertItem('/header', $navigation, null);
 
-        $navigation = new Navigation('Kurse', PluginEngine::getLink($this, array(), 'courses/overview'));
-        Navigation::insertItem('/header/kurse', $navigation, null);
-    }
+        $navigation = new Navigation('OHN-Kursportal',
+            PluginEngine::getURL($this, array(), 'index/ohnkursportal', true));
+        Navigation::insertItem('/header/ohnkursportal', $navigation,null );
+
+        $navigation = new Navigation('Kurse',
+            PluginEngine::getURL($this, array(), 'index/kurse', true));
+        Navigation::insertItem('/header/kurse', $navigation,null );
+
+
+        $navigation = new Navigation('Projektpartner',
+            PluginEngine::getURL($this, array(), 'index/projektpartner', true));
+        Navigation::insertItem('/header/projektpartner', $navigation,null );
+
+        $navigation = new Navigation('Jetzt Registreiren', '/studip/plugins.php/mooc/registrations/new?moocid=75e42a0973431edb99d322afa041071b');
+        Navigation::insertItem('/header/register', $navigation, null);
+
+
+        }
 
     public function perform($unconsumed_path)
     {

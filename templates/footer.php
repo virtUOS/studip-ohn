@@ -39,12 +39,12 @@
       <div class="footer_navigation_sec">
 	      <ul>
 		      <li>
-			      <a href="/studip/plugins.php/ohnlayout/index/nutzungsbedingungen">
+			          <a href="<?= URLHelper::getUrl('/studip/plugins.php/ohnlayout/index/nutzungsbedingungen') ?>">
 				    	Nutzungsbedingungen
 			      </a>
 		      </li>
 		      <li>
-			      <a href="/studip/plugins.php/ohnlayout/index/datenschutz">
+           <a href="<?= URLHelper::getUrl('/studip/plugins.php/ohnlayout/index/datenschutz') ?>">
 				       Datenschutz 
 			      </a>
 		      </li>
