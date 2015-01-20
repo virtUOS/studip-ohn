@@ -65,6 +65,12 @@ class OHNLayout extends StudIPPlugin implements SystemPlugin {
         Navigation::removeItem('/footer/blog');
         Navigation::removeItem('/footer/sitemap');
         Navigation::removeItem('/footer/studip');
+
+        $navigation = new Navigation('Header', PluginEngine::getLink($this, array(), 'courses/overview'));
+        Navigation::insertItem('/header', $navigation, null);
+
+        $navigation = new Navigation('Kurse', PluginEngine::getLink($this, array(), 'courses/overview'));
+        Navigation::insertItem('/header/kurse', $navigation, null);
     }
 
     public function perform($unconsumed_path)
