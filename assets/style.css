@@ -17,6 +17,10 @@ body {
 	margin: 15px 0px 0px;
 }
 
+#layout_page #tabs li a img {
+	display: none;
+}
+
 #layout_content {
 	margin: 0px;
 }
