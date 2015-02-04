@@ -352,6 +352,89 @@ h1, h2, h3, h4 {
   width: 750px;
 }
 /* OHN Globale Navigation */
+
+.user_menu {
+	float: right;
+	position: relative;
+	top: 5px;
+}
+
+.user_menu .user_dropdown, .user_menu .user_button {
+	background: transparent;
+	border: 1px solid #c8c8c8;
+}
+
+.user_menu .user_button {
+	border-radius: 3px 0px 0px 3px;	
+	font-size: 14px;
+	position: relative;
+	font-weight: bold;
+	color: #3c3c3c;
+	padding: 6px 12px 8px 35px;
+	background-image: url("../../../../assets/images/icons/32/grey/home.png");
+	background-size: 14px 14px;
+	background-position: 10px center;
+	background-repeat: no-repeat;
+}
+
+.user_menu .user_dropdown {
+	border-radius: 0px 3px 3px 0px;	
+	font-size: 14px;
+	position: relative;
+	font-weight: bold;
+	color: #3c3c3c;
+	padding: 6px 8px 8px;
+	border-left: none;
+}
+
+.user_menu .user_dropdown img {
+	width: 14px;
+	height: 14px;
+}
+
+.user_menu ul {
+	display: none;
+	list-style: none;
+	border: 1px solid #555;
+	border-radius: 3px;
+	padding: 0px 10px;
+	background: #fff;
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.4);
+	position: absolute;
+	right: 0;
+	top: 40px;
+	min-width: 180px;
+	z-index: 9999;
+}
+
+.user_menu ul li a {
+	padding: 5px;
+	font-size: 16px;
+	margin: 5px 0;
+	display: block;
+	color: #1d9dd9;
+	border-bottom: 1px dotted #c8c8c8;
+}
+
+.user_menu ul li a:hover {
+	color: #3c3c3c;
+}
+
+.user_menu ul li:last-child a {
+	border: none;
+}
+
+.ohn-logo img {
+	height: 20px;
+	padding-right: 10px;
+}
+
+
+.helpbar {
+	display: none;
+}
+
+
 .ohn-global ol {
   padding-left: 0;
 }

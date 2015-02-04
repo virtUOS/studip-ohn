@@ -60,22 +60,19 @@
 
 <div id="header_slim" class="main-container">
 
-    <div style="float: right;">
+    <div class="user_menu">
         <!-- Split button -->
-		<div class="btn-group">
 			
 			<? if (is_object($GLOBALS['user']) && $GLOBALS['user']->id != 'nobody') : ?>
-				<button type="button" class="btn btn-default">
+				<a href="#" class="user_button">
 					<? echo $GLOBALS['auth']->auth['perm']; ?>
-				</button>
+				</a>
+				<a href="#" class="user_dropdown">
+					<?= Assets::img('/images/icons/24/grey/arr_1down.png'); ?>
+				</a>
 			<? endif ?>
-			
-            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                <span class="caret"></span>
-                <span class="sr-only">Toggle Dropdown</span>
-            </button>
 
-            <ul class="dropdown-menu" role="menu">
+            <ul>
                 <? if (is_object($GLOBALS['perm']) && PersonalNotifications::isActivated() && $GLOBALS['perm']->have_perm("autor")) : ?>
                 <? $notifications = PersonalNotifications::getMyNotifications() ?>
                 <? $lastvisit = (int) UserConfig::get($GLOBALS['user']->id)->getValue('NOTIFICATIONS_SEEN_LAST_DATE') ?>
@@ -100,8 +97,8 @@
                 <? endforeach ?>
                 <? endif ?>
             </ul>
+            
 		</div>
-	</div>
 
     <header aria-label="Globale Navigation" class="ohn-global">
         <nav>
