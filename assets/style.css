@@ -3,9 +3,16 @@
 
 @import url("main.css");
 
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
+
 body {
   background-image: none !important;
   background-color: #fff !important;
+  font-family: "Open Sans",Verdana,Geneva,sans-serif,sans-serif !important;
+}
+
+body, h1, h2, h3, h4, h5, p, div, a {
+	font-family: "Open Sans",Verdana,Geneva,sans-serif,sans-serif !important;
 }
 
 #layout_wrapper {
@@ -566,6 +573,11 @@ section#courseware section.active-section {
   margin-top: 40px;
 }
 /* ##### SIDEBAR ##### */
+
+#layout-sidebar {
+	margin-right: 25px !important;
+}
+
 #layout_sidebar, #layout_infobox, .infobox, .infobox-img > div {
   width: 100% !important;
 }
@@ -661,4 +673,66 @@ table {
 
 #layout_footer .footer_navigation_sec ul li a {
   color: #1d9dd9;
+}
+
+
+
+/* ALL COURSES */
+
+#course-list article {
+	border-bottom: 4px solid #f5f5f5 !important;
+  margin: 0px !important;
+  padding: 0px !important;
+  height: 192px;
+}
+
+#course-list article h1 {
+	margin: 0;
+	color: #1d9dd9;
+	font-size: 34px;
+	padding: 24px 0px 10px;
+}
+
+#course-list article .course-avatar-wrapper {
+	float: left;
+	width: 300px !important;
+	max-width: 300px !important;
+	height: auto !important;
+	padding: 24px 0px;
+	margin-right: 15px;
+}
+
+#course-list article .course-avatar-medium {
+	padding: 0px !important;
+	float: none !important;
+	max-width: 260px !important;
+	max-height: 140px !important;
+	width: auto !important;
+	height: auto !important;
+}
+
+#course-list article .button {
+	 background-clip: padding-box;
+    background-color: #8dcee6;
+    background-image: none;
+    border: 1px solid #5ea2bb;
+    border-radius: 3px;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0) inset;
+    box-sizing: border-box;
+    color: #fff;
+    display: block;
+    float: left;
+    font: 15px/1.6rem "Open Sans",Verdana,Geneva,sans-serif,sans-serif;
+    letter-spacing: 0;
+    margin-top: 16px;
+    padding: 6px 32px 7px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #076794;
+    bottom: 24px !important;
+    left: 315px !important;
+}
+
+#course-list article .button:hover {
+	background-color: #5DC0E3;
 }
