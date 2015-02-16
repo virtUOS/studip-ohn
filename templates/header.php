@@ -68,7 +68,7 @@
 					<? echo $GLOBALS['auth']->auth['perm']; ?>
 				</a>
 				<a href="#" class="user_dropdown">
-					<?= Assets::img('/images/icons/24/grey/arr_1down.png'); ?>
+					<?= Assets::img('/images/icons/16/grey/arr_1down.png'); ?>
 				</a>
 			<? endif ?>
 
