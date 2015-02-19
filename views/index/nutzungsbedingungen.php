@@ -1,3 +1,4 @@
+<div id="mooc-nutzungsbedingungen">
 <h1>Nutzungsbedingungen</h1>
 
 <p>Sehr geehrte Nutzerin, sehr geehrter Nutzer,</p>
@@ -144,3 +145,4 @@
 &nbsp;</p>
 
 <p>Stand: August 2014</p>
+</div>

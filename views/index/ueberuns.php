@@ -1,3 +1,4 @@
+<div id="mooc-ueberuns">
 <h1>&Uuml;ber Uns</h1>
 <p>Wir unterst&uuml;tzen beruflich qualifizierte Menschen in Niedersachsen, die sich nach einer l&auml;ngeren Phase der Berufst&auml;tigkeit in das Abenteuer Studium st&uuml;rzen wollen, auf ihrem Bildungsweg.</p>
 
@@ -65,3 +66,4 @@ Wir beraten Studieninteressierte und beantworten Fragen, die bei der &Uuml;berle
 <p>F&uuml;r die Entwicklung der interaktiven Online-Vorbereitungskurse konnten mit dem <a href="http://www.elsa.uni-hannover.de">eLearning Service</a> der Leibniz Universit&auml;t Hannover, mit dem <a href="http://www.uni-oldenburg.de/c3l">Center f&uuml;r Lebenslanges Lernen (C3L)</a> der Carl von Ossietzky Universit&auml;t Oldenburg sowie dem <a href="http://www.hawk-hhg.de/hochschule">Zentrum f&uuml;r Information, Medien und Technologie der Hochschule f&uuml;r angewandte Wissenschaft und Kunst Hildesheim/Holzminden/G&ouml;ttingen</a> renommierte und kompetente Projektpartner mit langj&auml;hriger Expertise in ihren Fachthemen und im Bereich E-Learning f&uuml;r das Projekt gewonnen werden.</p>
 
 <p>Weitere Online-Studienvorbereitungskurse sowie eine st&auml;rkere Vernetzung mit lokalen und regionalen Unterst&uuml;tzungsangeboten f&uuml;r beruflich qualifizierte Studieninteressierte sind f&uuml;r 2015 geplant. &nbsp;</p>
+</div>

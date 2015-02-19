@@ -1,3 +1,4 @@
+<div id="mooc-projektpartner">
 <h1>Partner der OHN</h1>
 
 <div class="list_item">
@@ -66,4 +67,5 @@ Bibliotheken, Rechenzentrum und eLearning-Team bilden gemeinsam das ZIMT, das da
 ZIMT eLearning unterstützt dabei alle Hochschulangehörigen beim Einsatz von eLearning-Komponenten und zeigt, wie man digitale Werkzeuge didaktisch einsetzen kann. Im Mittelpunkt stehen hierbei die Lehrenden mit Ihren Erfahrungen und Vorhaben.
 	</p>
 	<div class="clear"></div>
+</div>
 </div>

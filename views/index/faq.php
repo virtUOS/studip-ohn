@@ -1,3 +1,4 @@
+<div id="mooc-faq">
 <h1>FAQ</h1>
 <p>
 <h2>Wer kann an den Online-Vorbereitungskursen teilnehmen? </h2>
@@ -22,3 +23,4 @@ Sollte es zukünftig aufeinander aufbauende Kursfolgen geben, wird das in den Bes
 
 <p>Sie benötigen für die Teilnahme keine neue Software. Mit einem gängigen aktuellen Betriebssystem, aktueller Software und einer stabilen Internetverbindung ist eine Teilnahme  unkompliziert möglich. Melden Sie sich einfach in Ihrem gewohnten Browser an. Bei Rückfragen werden die Teilnehmenden durch Tutorinnen und Tutoren unterstützt.</p>
 </p>
+</div>

@@ -1,3 +1,4 @@
+<div id="mooc-kurse">
 <h1>Kurse</h1>
 
 <div class="list_item">
@@ -47,4 +48,5 @@
 	können.
 	</P>
 	<div class="clear"></div>
+</div>
 </div>

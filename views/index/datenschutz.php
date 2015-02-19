@@ -1,3 +1,4 @@
+<div id="mooc-datenschutz">
 <h1>Datenschutz</h1>
 <p>
 Durch das Abschicken der Registrierung auf der Website des OHN-KursPortals erteilen Sie Ihre Einwilligung in die nachfolgend beschriebene Datenerhebung und Datenverarbeitung. Sie k&ouml;nnen Ihre Einwilligung selbstverst&auml;ndlich jederzeit gegen&uuml;ber der OHN widerrufen. Der Widerruf ist zu senden an die </p>
@@ -28,3 +29,4 @@ Freiwillige Angaben:</li>
 <li> Grund der Registrierung.</li> 
 </ul>
 Die personenbezogenen Daten werden nicht an Dritte weitergegeben. Sie dienen ausschlie&szlig;lich zur Bewerbung von Kursangeboten, zur Kontaktaufnahme und zur Erstellung anonymisierter Statistiken durch die OHN sowie zur sp&auml;teren Anmeldung zu einzelnen Kursen. F&uuml;r die Anmeldung und Nutzung von Kursen gibt es sp&auml;ter eine separate Datenschutzerkl&auml;rung und Nutzungsbedingungen, die bei der Kursanmeldung angezeigt wird.
+</div>

@@ -1,3 +1,4 @@
+<div id="mooc-impressum">
 <h1>Impressum</h1>
 <h2>Angaben gem&auml&szlig § 5 TMG </h2>
 
@@ -50,3 +51,4 @@ Karlstr. 23<br/>
 
 soweit nicht anders angegeben:<br/>
 © Servicestelle Offene Hochschule Niedersachsen gGmbH
+</div>

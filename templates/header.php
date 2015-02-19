@@ -60,6 +60,11 @@
 
 <div id="header_slim" class="main-container">
 
+    <? if ($GLOBALS['user']->id == 'nobody') : ?>
+
+    <!-- Hier den Button zum Anmelden reinbauen -->
+
+    <? else : ?>
     <div class="user_menu">
         <!-- Split button -->
 			
@@ -99,6 +104,7 @@
             </ul>
             
 		</div>
+    <? endif ?>
 
     <header aria-label="Globale Navigation" class="ohn-global">
         <nav>

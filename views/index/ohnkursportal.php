@@ -1,3 +1,4 @@
+<div id="mooc-ohnkursportal">
 <h1>OHN-KursPortal</h1>
 
 <img src="<?= $GLOBALS['OHN_IMAGES'] ?>/ohn-logo_portal.png">
@@ -37,3 +38,4 @@ informiert.</p>
     <li>sind barrierearm konzipiert.</li>
 </ul>
 </p>
+</div>
