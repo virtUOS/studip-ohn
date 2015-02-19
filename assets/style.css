@@ -596,6 +596,15 @@ section#courseware section.active-section {
   border: none;
 }
 
+.sidebar-image {
+	display: none;
+}
+
+section.sidebar, .sidebar-widget-content {
+	border: none;
+}
+
+
 .infobox {
   border: none;
   background-color: #EEF5DD;
