@@ -60,51 +60,10 @@
 
 <div id="header_slim" class="main-container">
 
-    <? if ($GLOBALS['user']->id == 'nobody') : ?>
 
-    <!-- Hier den Button zum Anmelden reinbauen -->
 
-    <? else : ?>
-    <div class="user_menu">
-        <!-- Split button -->
-			
-			<? if (is_object($GLOBALS['user']) && $GLOBALS['user']->id != 'nobody') : ?>
-				<a href="#" class="user_button">
-					<? echo $GLOBALS['auth']->auth['perm']; ?>
-				</a>
-				<a href="#" class="user_dropdown">
-					<?= Assets::img('/images/icons/16/grey/arr_1down.png'); ?>
-				</a>
-			<? endif ?>
-
-            <ul>
-                <? if (is_object($GLOBALS['perm']) && PersonalNotifications::isActivated() && $GLOBALS['perm']->have_perm("autor")) : ?>
-                <? $notifications = PersonalNotifications::getMyNotifications() ?>
-                <? $lastvisit = (int) UserConfig::get($GLOBALS['user']->id)->getValue('NOTIFICATIONS_SEEN_LAST_DATE') ?>
-
-                <? endif ?>
-                <? if (Navigation::hasItem('/links')) : ?>
-                <? foreach (Navigation::getItem('/links') as $nav) : ?>
-                    <? if ($nav->isVisible()) : ?>
-                        <li <? if ($nav->isActive()) echo 'class="active"'; ?>>
-                        <a
-                        <? if (is_internal_url($url = $nav->getURL())) : ?>
-                            href="<?= URLHelper::getLink($url, $link_params) ?>"
-                        <? else : ?>
-                            href="<?= htmlReady($url) ?>" target="_blank"
-                        <? endif ?>
-                        <? if ($nav->getDescription()): ?>
-                            title="<?= htmlReady($nav->getDescription()) ?>"
-                        <? endif; ?>
-                        ><?= htmlReady($nav->getTitle()) ?></a>
-                        </li>
-                    <? endif ?>
-                <? endforeach ?>
-                <? endif ?>
-            </ul>
-            
-		</div>
-    <? endif ?>
+    
+    
 
     <header aria-label="Globale Navigation" class="ohn-global">
         <nav>
@@ -139,14 +98,68 @@
                 <li class="ohn-logo">
                     <img src="<?= $GLOBALS['OHN_IMAGES'] ?>/ohn_logo.png">
                 </li>
+                
+                <? if ($GLOBALS['user']->id == 'nobody') : ?>
+	                
+	                <li>
+										<a href="/index.php?again=yes" class="login_button">Anmelden</a>
+	                </li>
+	                
+	              <? else : ?>
+	                
+	                <li class="user_menu">
+										<? if (is_object($GLOBALS['user']) && $GLOBALS['user']->id != 'nobody') : ?>
+											<a href="#" class="user_button">
+												<? echo $GLOBALS['auth']->auth['perm']; ?>
+											</a>
+											<a href="#" class="user_dropdown">
+												<?= Assets::img('/images/icons/16/grey/arr_1down.png'); ?>
+											</a>
+										<? endif ?>
+							
+											<ul>
+											  <? if (is_object($GLOBALS['perm']) && PersonalNotifications::isActivated() && $GLOBALS['perm']->have_perm("autor")) : ?>
+											  <? $notifications = PersonalNotifications::getMyNotifications() ?>
+											  <? $lastvisit = (int) UserConfig::get($GLOBALS['user']->id)->getValue('NOTIFICATIONS_SEEN_LAST_DATE') ?>
+											
+											  <? endif ?>
+											  <? if (Navigation::hasItem('/links')) : ?>
+											  <? foreach (Navigation::getItem('/links') as $nav) : ?>
+										      <? if ($nav->isVisible()) : ?>
+									          <li <? if ($nav->isActive()) echo 'class="active"'; ?>>
+									          <a
+									          <? if (is_internal_url($url = $nav->getURL())) : ?>
+									              href="<?= URLHelper::getLink($url, $link_params) ?>"
+									          <? else : ?>
+									              href="<?= htmlReady($url) ?>" target="_blank"
+									          <? endif ?>
+									          <? if ($nav->getDescription()): ?>
+									              title="<?= htmlReady($nav->getDescription()) ?>"
+									          <? endif; ?>
+									          ><?= htmlReady($nav->getTitle()) ?></a>
+									          </li>
+										      <? endif ?>
+											  <? endforeach ?>
+											  <? endif ?>
+											</ul>
+							            
+										</li>
+							    <? endif ?>
+                
+                
+                
+                
             </ol>
         </nav>
     </header>
 
-    <h2>
+		<? if ($GLOBALS['user']->id !== 'nobody') : ?>
+    	<h2>
         <?=($current_page != "" ? htmlReady($current_page) : "")?>
         <?= $publi_chint ? '(' . htmlReady($public_hint) . ')' : '' ?>
-    </h2>
+    	</h2>
+    <? endif ?>
+
 </div>
 		
 <!-- Ende Header -->

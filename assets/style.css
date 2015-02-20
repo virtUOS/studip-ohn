@@ -3,7 +3,7 @@
 
 @import url("main.css");
 
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800);
 
 body {
   background-image: none !important;
@@ -326,9 +326,10 @@ h1, h2, h3, h4 {
 }
 
 #header_slim .logo_slim img {
-  height: 30px;
+  height: 47px;
 }
 
+/*
 #header_slim .logo_slim:before {
   content: "";
   display: block;
@@ -349,6 +350,7 @@ h1, h2, h3, h4 {
   top: 0;
   width: 1px;
 }
+*/
 
 #header_slim h2 {
   color: #646464;
@@ -358,7 +360,7 @@ h1, h2, h3, h4 {
   font-weight: 600;
   letter-spacing: 0;
   margin-bottom: 0;
-  margin-top: 9px;
+  margin-top: 15px;
   overflow: hidden;
   text-overflow: ellipsis;
   text-shadow: 0 1px 0 #fff;
@@ -377,6 +379,8 @@ h1, h2, h3, h4 {
 .user_menu .user_dropdown, .user_menu .user_button {
 	background: transparent;
 	border: 1px solid #c8c8c8;
+	display: block;
+	float: left;
 }
 
 .user_menu .user_button {
@@ -439,6 +443,11 @@ h1, h2, h3, h4 {
 	border: none;
 }
 
+.ohn-logo {
+	margin-top: 5px;
+	margin-right: 10px;
+}
+
 .ohn-logo img {
 	height: 20px;
 	padding-right: 10px;
@@ -449,25 +458,65 @@ h1, h2, h3, h4 {
 	display: none;
 }
 
+.login_button {
+	background: none repeat scroll 0 0 #126f9a;
+  box-shadow: 0 2px 1px 0 #0a4a67;
+  color: #fff !important;
+  border: medium none;
+  border-radius: 2px;
+  line-height: 16px;
+  font-weight: 600;
+  font-size: 16px !important;
+  letter-spacing: 0;
+  padding: 10px 20px;
+  text-align: center;
+  text-shadow: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  transition: color 0.25s ease-in-out 0s, background 0.25s ease-in-out 0s, box-shadow 0.25s ease-in-out 0s;
+}
+
+.login_button:hover {
+	background-color: #1790C7;
+}
+
+.ohn-global nav {
+	padding: 4px 0px 0px;
+}
 
 .ohn-global ol {
   padding-left: 0;
 }
 
-.ohn-global ol li {
+.ohn-global .nav-global li {
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 700;
   display: inline-block;
-  margin: 0 10px;
+  margin-left: 20px;
 }
 
-.ohn-global ol li a {
+.ohn-global nav ol.nav-global.left {
+  margin-top: 10px;
+}
+
+.ohn-global nav ol.nav-courseware.right {
+ margin-top: 5px;
+}
+
+.ohn-global nav ol.nav-courseware.right > li {
+ float: left;
+}
+
+.ohn-global ol.nav-global.left li a {
   color: #646464;
   font-size: 12px !important;
+  letter-spacing: 1px;  
 }
 
-.ohn-global ol li a:hover {
-  color: #1D9DD9;
+.ohn-global ol.nav-global.left li a:hover {
+  color: #1D9DD9 !important;
 }
 
 .ohn-global ol li:first-child {
@@ -758,3 +807,100 @@ table {
 #course-list article .button:hover {
 	background-color: #5DC0E3;
 }
+
+
+/* LOGIN PAGE */
+
+.index_container {
+	background: none repeat scroll 0 0 #fff;
+  box-sizing: border-box;
+  margin: 0 auto;
+  width: 960px !important;
+}
+
+.logintable {
+	background-image: none !important;
+	box-shadow: none !important;
+	border: none !important;
+}
+
+.logintable h1 {
+	color: #1790c7;
+  font-size: 26px !important;
+  line-height: 26.64px !important;
+  text-transform: uppercase !important;
+}
+
+.logintable p {
+	color: #707276;
+  font-size: 20px;
+  margin: 0px 0px 30px 0px !important;
+  padding-left: 40px !important;
+  padding-bottom: 20px !important;
+	border-bottom: 1px solid #8a8c8f;
+  text-transform: none;
+}
+
+.logintable form {
+	padding-bottom: 0px !important;
+}
+
+.logintable form table {
+	width: 70% !important;
+}
+
+.logintable form td {
+	display: block !important;
+}
+
+.logintable form tr td:first-child {
+	font-weight: 700 !important;
+	font-size: 15px !important;
+}
+
+.logintable form input {
+	margin: 0;
+  padding: 10px 15px;
+  width: 100%;
+  border-radius: 0;
+  border: 1px solid #C8C8C8;
+  color: #3c3c3c;
+  display: block;
+  font-family: "Open Sans",Verdana,Geneva,sans-serif,sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px !important;
+  height: auto;
+}
+
+.logintable form table tfoot {
+	background: transparent !important;
+}
+
+.logintable form table tfoot button {
+	font-weight: 600 !important;
+	font-size: 16px !important;
+  letter-spacing: 0 !important;
+  text-transform: none;
+  vertical-align: middle;
+  background: none repeat scroll 0 0 #126f9a;
+  box-shadow: 0 2px 1px 0 #0a4a67;
+  color: #fff;
+  border: medium none;
+  padding: 10px 20px;
+  text-align: center;
+  text-shadow: none;
+}
+
+.logintable form table tfoot button:hover {
+	background-color: #1790C7 !important;
+}
+
+.logintable form table tfoot button:before {
+	margin: 3px 9px 0px -4px !important;
+}
+
+.logintable form table tfoot a.button {
+	display: none !important;
+}
+
