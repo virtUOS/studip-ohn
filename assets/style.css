@@ -667,14 +667,17 @@ table.infobox td, .infoboxrahmen, table tr.even, table tr.alt, table tr:nth-of-t
 table {
   border: none;
 }
+
+
 /* ##### FOOTER ##### */
+
 #layout_footer {
   background-color: #efefef;
   border: none;
   height: auto;
   text-align: left;
   padding: 25px 50px 25px;
-  margin-top: 15px;
+  margin-top: 50px;
 }
 
 #footer {
@@ -904,3 +907,85 @@ table {
 	display: none !important;
 }
 
+
+/* Sub Pages */
+
+
+
+#mooc-datenschutz, #mooc-nutzungsbedingungen, #mooc-impressum, #mooc-kontakt, #mooc-faq, #mooc-ueberuns, #mooc-ohnkursportal, #mooc-kurse, #mooc-projektpartner {
+	width: 960px !important;
+	margin: 0px auto;
+}
+
+#mooc-datenschutz h1, #mooc-nutzungsbedingungen h1, #mooc-impressum h1, #mooc-kontakt h1, #mooc-faq h1, #mooc-ueberuns h1, #mooc-ohnkursportal h1, #mooc-kurse h1, #mooc-projektpartner h1 {
+	border-bottom: 1px solid #8a8c8f;
+  color: #1790c7;
+  font-family: "Helvetica Neue","Helvetica","Arial",sans-serif;
+  font-feature-settings: normal;
+  font-kerning: auto;
+  font-language-override: normal;
+  font-size: 26px !important;
+  font-size-adjust: none;
+  font-stretch: normal;
+  font-style: normal;
+  font-synthesis: weight style;
+  font-variant: normal;
+  font-weight: 300 !important;
+  line-height: 26.64px !important;
+  padding: 50px 30px 20px;
+  text-align: left;
+}
+
+#mooc-datenschutz h2, #mooc-nutzungsbedingungen h2, #mooc-impressum h2, #mooc-kontakt h2, #mooc-faq h2, #mooc-ueberuns h2 {
+	color: #646464;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  margin-top: 30px;
+  text-transform: uppercase;
+}
+
+#mooc-datenschutz ul, #mooc-nutzungsbedingungen ul, #mooc-impressum ul, #mooc-kontakt ul, #mooc-faq ul, #mooc-ueberuns ul, #mooc-ohnkursportal ul {
+	margin: 1em 0;
+  padding: 0 0 0 40px;
+}
+
+#mooc-datenschutz ul li, #mooc-nutzungsbedingungen ul li, #mooc-impressum ul li, #mooc-kontakt ul li, #mooc-faq ul li, #mooc-ueberuns ul li, #mooc-ohnkursportal ul li {
+	margin: 15px 50px;
+}
+
+#mooc-datenschutz a, #mooc-nutzungsbedingungen a, #mooc-impressum a, #mooc-kontakt a, #mooc-ueberuns a {
+	color: #1d9dd9;
+	font-size: 14px !important;
+}
+
+#mooc-kurse .list_item, #mooc-projektpartner .list_item {
+	border-bottom: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+#mooc-kurse .list_item:last-child, #mooc-projektpartner .list_item:last-child {
+	border-bottom: none !important;
+}
+
+#mooc-kurse .list_item img, #mooc-projektpartner .list_item img {
+	float: left;
+  height: auto;
+  max-width: 20%;
+  padding: 5px 1% 20px;
+  box-sizing: content-box;
+}
+
+#mooc-kurse .list_item p, #mooc-projektpartner .list_item p {
+	float: left;
+	padding: 0 1%;
+	margin: 0 0 20px !important;
+	width: 76%;
+	box-sizing: content-box;
+}
+
+#mooc-ohnkursportal img {
+	float: right;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  width: 40%;
+}
