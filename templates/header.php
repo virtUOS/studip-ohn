@@ -102,7 +102,7 @@
                 <? if ($GLOBALS['user']->id == 'nobody') : ?>
 	                
 	                <li>
-										<a href="/index.php?again=yes" class="login_button">Anmelden</a>
+						<a href="<?= URLHelper::getUrl('index.php?again=yes') ?>" class="login_button">Anmelden</a>
 	                </li>
 	                
 	              <? else : ?>
