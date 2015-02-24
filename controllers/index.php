@@ -66,4 +66,52 @@ class IndexController extends StudipController
     {
     }
 
+
+    public function logout_action()
+    {
+        global $auth, $sess, $user;
+
+        require_once 'lib/messaging.inc.php';
+
+        //nur wenn wir angemeldet sind sollten wir dies tun!
+        if ($auth->auth["uid"]!="nobody")
+        {
+            $sms = new messaging();
+
+            $my_messaging_settings = UserConfig::get($user->id)->MESSAGING_SETTINGS;
+
+            //Wenn Option dafuer gewaehlt, alle ungelsesenen Nachrichten als gelesen speichern
+            if ($my_messaging_settings["logout_markreaded"]) {
+                $sms->set_read_all_messages();
+            }
+
+            $logout_user=$user->id;
+
+            // TODO this needs to be generalized or removed
+            //erweiterung cas
+            if ($auth->auth["auth_plugin"] == "cas"){
+                $casauth = StudipAuthAbstract::GetInstance('cas');
+                $docaslogout = true;
+            }
+            //Logout aus dem Sessionmanagement
+            $auth->logout();
+            $sess->delete();
+
+            page_close();
+
+            //Session changed zuruecksetzen
+            $timeout=(time()-(15 * 60));
+            $user->set_last_action($timeout);
+
+            //der logout() Aufruf fuer CAS (dadurch wird das Cookie (Ticket) im Browser zerstoert)
+            if ($docaslogout){
+                $casauth->logout();
+            }
+        } else {
+            $sess->delete();
+            page_close();
+        }
+
+        $this->redirect(URLHelper::getURL('plugins.php/mooc/courses/overview'));
+    }
 }

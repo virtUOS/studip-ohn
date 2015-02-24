@@ -31,23 +31,23 @@ class OHNLayout extends StudIPPlugin implements SystemPlugin {
         ##add Footer Navigation
         $navigation = new Navigation('Über uns',
                 PluginEngine::getURL($this, array(), 'index/ueberuns', true));
-        Navigation::insertItem('/footer/ueberuns', $navigation,null );
+        Navigation::insertItem('/footer/ueberuns', $navigation, null);
 
         $navigation = new Navigation('Neuigkeiten', 'http://www.offene-hochschule-niedersachsen.de/site/offene-hochschule/aktuelles/news');
-        Navigation::insertItem('/footer/neugikeiten', $navigation,null );
+        Navigation::insertItem('/footer/neugikeiten', $navigation, null);
 
         $navigation = new Navigation('FAQ',
                 PluginEngine::getURL($this, array(), 'index/faq', true));
-        Navigation::insertItem('/footer/faq', $navigation,null );
+        Navigation::insertItem('/footer/faq', $navigation, null);
 
         $navigation = new Navigation('Kontakt',
                 PluginEngine::getURL($this, array(), 'index/kontakt', true));
-        Navigation::insertItem('/footer/kontakt', $navigation,null );
+        Navigation::insertItem('/footer/kontakt', $navigation, null);
 
 
         $navigation = new Navigation('Impressum',
                 PluginEngine::getURL($this, array(), 'index/impressum', true));
-        Navigation::insertItem('/footer/impressum', $navigation,null );
+        Navigation::insertItem('/footer/impressum', $navigation, null);
 
         
         ##remove studip Standard navigation
@@ -63,22 +63,25 @@ class OHNLayout extends StudIPPlugin implements SystemPlugin {
 
             $navigation = new Navigation('OHN-Kursportal',
                 PluginEngine::getURL($this, array(), 'index/ohnkursportal', true));
-            Navigation::insertItem('/header/ohnkursportal', $navigation,null );
+            Navigation::insertItem('/header/ohnkursportal', $navigation, null);
 
             $navigation = new Navigation('Kurse',
                 PluginEngine::getURL($this, array(), 'index/kurse', true));
-            Navigation::insertItem('/header/kurse', $navigation,null );
+            Navigation::insertItem('/header/kurse', $navigation, null);
 
 
             $navigation = new Navigation('Projektpartner',
                 PluginEngine::getURL($this, array(), 'index/projektpartner', true));
-            Navigation::insertItem('/header/projektpartner', $navigation,null );
+            Navigation::insertItem('/header/projektpartner', $navigation, null);
 
             $navigation = new Navigation('Jetzt Registrieren', 'plugins.php/mooc/courses/index');
             Navigation::insertItem('/header/register', $navigation, null);
         }
 
-
+        // alternative logout
+        $navigation = new Navigation('Logout',
+                PluginEngine::getURL($this, array(), 'index/logout', true));
+        Navigation::insertItem('/links/logout', $navigation, null);
     }
 
     public function perform($unconsumed_path)
