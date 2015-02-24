@@ -109,7 +109,7 @@
 	                
 	                <li class="user_menu">
 										<? if (is_object($GLOBALS['user']) && $GLOBALS['user']->id != 'nobody') : ?>
-											<a href="#" class="user_button">
+											<a href="<?= URLHelper::getUrl('dispatch.php/start') ?>" class="user_button">
 												<? echo $GLOBALS['auth']->auth['perm']; ?>
 											</a>
 											<a href="#" class="user_dropdown">
