@@ -68,7 +68,7 @@
     <header aria-label="Globale Navigation" class="ohn-global">
         <nav>
             <h1 class="logo_slim">
-                <a href="<?= URLHelper::getUrl('plugins.php/mooc/courses/overview') ?>">
+                <a href="<?= URLHelper::getUrl('plugins.php/mooc/courses/overview?cancel_login=1') ?>">
                     <img src="<?= $GLOBALS['OHN_IMAGES'] ?>/header-logo.png" alt="Logo" />
                 </a>
             </h1>
