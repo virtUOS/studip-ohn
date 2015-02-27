@@ -36,6 +36,7 @@ section#courseware {
   margin: 0px;
   border: 1px solid #c0c0c0;
   border-radius: 3px;
+  min-height: 500px;
 }
 
 section#courseware .breadcrumb {
@@ -189,6 +190,25 @@ section#courseware ol.active-subchapter li > a {
 section#courseware ol.active-subchapter li {
 	width: 45px !important;
 	height: 45px !important;
+}
+
+section#courseware ol.active-subchapter li.controls {
+	width: auto !important;
+	height: 45px !important;
+}
+
+section#courseware ol.active-subchapter li.controls button {
+	height: 45px !important;
+}
+
+section#courseware .active-subchapter > li > .edit-structure {
+	margin: 0;
+	height: 45px;
+}
+
+section#courseware .active-subchapter > li > .edit-structure input {
+	position: relative;
+	z-index: 9999;
 }
 
 section#courseware ol.active-subchapter .prev, section#courseware ol.active-subchapter .prev a {
@@ -542,6 +562,11 @@ h1, h2, h3, h4 {
   color: #222;
 }
 
+#layout_footer .footer_navigation_sec a img {
+  width: 20px !important;
+  height: 20px !important;
+}
+
 input.quicksearchbox {
   height: 19px;
 }
@@ -561,6 +586,7 @@ input.quicksearchbox {
 
 #tabs {
   position: relative;
+  margin-bottom: 30px;
 }
 
 #tabs li {
@@ -785,7 +811,7 @@ table {
 	height: auto !important;
 }
 
-#course-list article .button {
+#course-list article .button, #mooc-courses-show .button, #mooc-registrations-index .button {
 	 background-clip: padding-box;
     background-color: #8dcee6;
     background-image: none;
@@ -794,7 +820,7 @@ table {
     box-shadow: 0 0 0 rgba(0, 0, 0, 0) inset;
     box-sizing: border-box;
     color: #fff;
-    display: block;
+    display: inline-block;
     float: left;
     font: 15px/1.6rem "Open Sans",Verdana,Geneva,sans-serif,sans-serif;
     letter-spacing: 0;
@@ -803,12 +829,19 @@ table {
     text-align: center;
     text-decoration: none;
     text-shadow: 0 1px 0 #076794;
-    bottom: 24px !important;
-    left: 315px !important;
+    bottom: 0px !important;
+    left: 0px !important;
+    transition: all 0.25s ease-in-out;
 }
 
-#course-list article .button:hover {
+#course-list article .button:hover, #mooc-courses-show .button:hover, #mooc-registrations-index .button:hover {
 	background-color: #5DC0E3;
+}
+
+#course-list article .button {
+	left: 315px !important;
+	bottom: 24px !important;	
+	display: block !important;
 }
 
 
@@ -1128,11 +1161,93 @@ table {
 	background-color: #5DC0E3;
 }
 
+/* Registration */
 
+#mooc-registrations-index #layout_container #layout_container {
+	width: 960px;
+	margin: 0px auto;
+}
 
+#mooc-registrations-index #layout_container #layout_container #layout_content {
+	width: 600px;
+	margin-right: 40px;
+}
 
+#mooc-registrations-index #layout_container #layout_container #layout_content h1 {
+	border-bottom: 1px solid #8a8c8f;
+  color: #1790c7;
+  font-family: "Helvetica Neue","Helvetica","Arial",sans-serif;
+  font-feature-settings: normal;
+  font-kerning: auto;
+  font-language-override: normal;
+  font-size: 26px !important;
+  font-size-adjust: none;
+  font-stretch: normal;
+  font-style: normal;
+  font-synthesis: weight style;
+  font-variant: normal;
+  font-weight: 300 !important;
+  line-height: 32px !important;
+  padding: 50px 30px 20px;
+  text-align: left;
+}
 
+#mooc-registrations-index #layout_container #layout_container #layout_content form, #mooc-registrations-index #layout_container #layout_container #layout_sidebar {
+	font-size: 16px;
+	line-height: 24px;
+	color: #333;
+}
 
+#mooc-registrations-index #layout_container #layout_container #layout_content form label {
+	font-weight: 700;
+	display: block;
+	margin-top: 20px;
+	margin-bottom: 5px;
+}
+
+#mooc-registrations-index #layout_container #layout_container #layout_content form input, 
+#mooc-registrations-index #layout_container #layout_container #layout_content form textarea, 
+#mooc-registrations-index #layout_container #layout_container #layout_sidebar form input {
+	margin: 0;
+	padding: 10px 15px;
+	width: 100%;
+	color: #3c3c3c;
+	font-weight: 500;
+	box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1) inset;
+	font-size: 15px;
+	background-color: #fff;
+	border: 1px solid #c8c8c8;
+	line-height: 22px;
+}
+
+#mooc-registrations-index #layout_container #layout_container #layout_content form input:focus, 
+#mooc-registrations-index #layout_container #layout_container #layout_content form textarea:focus, 
+#mooc-registrations-index #layout_container #layout_container #layout_sidebar form input:focus {
+	border-color: #0686bf;
+}
+
+#mooc-registrations-index #layout_container #layout_container #layout_sidebar form input {
+	margin-bottom: 10px;	
+}
+
+#mooc-registrations-index #layout_container #layout_container #layout_content form #mooc_sign_up_terms_of_service {
+	display: inline-block !important;
+	width: 40px !important;
+}
+
+.tos input {
+	width: auto !important;
+	margin: 15px 0px 0px !important;
+	display: inline-block !important;
+}
+
+#mooc-registrations-index #layout_container #layout_container #layout_content form label[for="mooc_sign_up_terms_of_service"] {
+	display: inline-block !important;
+}
+
+#mooc-registrations-index #layout_container #layout_container #layout_sidebar {
+	padding-top: 158px;
+}
 
 
 
