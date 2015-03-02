@@ -811,7 +811,7 @@ table {
 	height: auto !important;
 }
 
-#course-list article .button, #mooc-courses-show .button, #mooc-registrations-index .button, .start-widgetcontainer .portal-widget-list .button {
+#course-list article .button, #mooc-courses-show .button, #mooc-registrations-index .button, .start-widgetcontainer .portal-widget-list .button, #request_new_password .button {
 	 background-clip: padding-box;
     background-color: #8dcee6;
     background-image: none;
@@ -834,7 +834,7 @@ table {
     transition: all 0.25s ease-in-out;
 }
 
-#course-list article .button:hover, #mooc-courses-show .button:hover, #mooc-registrations-index .button:hover, .start-widgetcontainer .portal-widget-list .button:hover {
+#course-list article .button:hover, #mooc-courses-show .button:hover, #mooc-registrations-index .button:hover, .start-widgetcontainer .portal-widget-list .button:hover, #request_new_password .button:hover {
 	background-color: #5DC0E3;
 }
 
@@ -941,11 +941,39 @@ table {
 }
 
 
+/* new password */
+
+#request_new_password #layout_content {
+	background: transparent;
+	color: #646464;
+	font-family: "Open Sans", sans-serif;
+}
+
+#request_new_password #layout_content .table_header_bold {
+	background: transparent;
+	color: #646464;
+}
+
+#request_new_password #layout_content table tr td div div {
+	background: transparent;
+	color: #646464;
+	line-height: 20px;
+	font-size: 14px !important;
+}
+
+#request_new_password #layout_content .button.accept:before, #request_new_password #layout_content .button.cancel:before {
+	margin: 4px 8px 0 -14px !important;
+}
+
+.messagebox {
+	line-height: 22px;
+}
+
 /* Sub Pages */
 
 
 
-#mooc-datenschutz, #mooc-nutzungsbedingungen, #mooc-impressum, #mooc-kontakt, #mooc-faq, #mooc-ueberuns, #mooc-ohnkursportal, #mooc-kurse, #mooc-projektpartner {
+#request_new_password #layout_content, #mooc-datenschutz, #mooc-nutzungsbedingungen, #mooc-impressum, #mooc-kontakt, #mooc-faq, #mooc-ueberuns, #mooc-ohnkursportal, #mooc-kurse, #mooc-projektpartner {
 	width: 960px !important;
 	margin: 0px auto;
 }
@@ -991,6 +1019,10 @@ table {
 	font-size: 14px !important;
 }
 
+#mooc-ueberuns, #mooc-ueberuns strong, #mooc-ueberuns a, #mooc-ueberuns p {
+	font-size: 14px !important;
+}
+
 #mooc-kurse .list_item, #mooc-projektpartner .list_item {
 	border-bottom: 1px solid #ccc;
   margin-bottom: 20px;
@@ -1022,6 +1054,9 @@ table {
   padding-left: 20px;
   width: 40%;
 }
+
+
+
 
 /* start page */
 
