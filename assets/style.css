@@ -811,7 +811,7 @@ table {
 	height: auto !important;
 }
 
-#course-list article .button, #mooc-courses-show .button, #mooc-registrations-index .button {
+#course-list article .button, #mooc-courses-show .button, #mooc-registrations-index .button, .start-widgetcontainer .portal-widget-list .button {
 	 background-clip: padding-box;
     background-color: #8dcee6;
     background-image: none;
@@ -834,7 +834,7 @@ table {
     transition: all 0.25s ease-in-out;
 }
 
-#course-list article .button:hover, #mooc-courses-show .button:hover, #mooc-registrations-index .button:hover {
+#course-list article .button:hover, #mooc-courses-show .button:hover, #mooc-registrations-index .button:hover, .start-widgetcontainer .portal-widget-list .button:hover {
 	background-color: #5DC0E3;
 }
 
@@ -1250,10 +1250,77 @@ table {
 }
 
 
+/* DASHBOARD */
 
+.start-widgetcontainer .portal-widget-list .ui-widget-content {
+	background: transparent !important;
+	border: none !important;
+}
 
+.start-widgetcontainer .portal-widget-list:last-child {
+	display: none;
+}
 
+.start-widgetcontainer .portal-widget-list .ui-widget-content .widget-header {
+	border-bottom: 1px solid #8a8c8f;
+	background: transparent !important;
+	color: #1790c7;
+	font-family: "Helvetica Neue","Helvetica","Arial",sans-serif;
+	font-feature-settings: normal;
+	font-kerning: auto;
+	font-language-override: normal;
+	font-size: 26px !important;
+	font-size-adjust: none;
+	font-stretch: normal;
+	font-style: normal;
+	font-synthesis: weight style;
+	font-variant: normal;
+	font-weight: 300 !important;
+	line-height: 26.64px !important;
+	padding: 50px 30px 20px;
+	text-align: left;
+}
 
+.start-widgetcontainer .portal-widget-list .ui-widget-content article .widget_image_wrapper {
+	float: left;
+	width: 25%;
+}
+
+.start-widgetcontainer .portal-widget-list .ui-widget-content article .widget_image_wrapper img {
+	max-width: 100%;
+	max-height: 100px;
+	width: auto !important;
+	height: auto !important;
+}
+
+.start-widgetcontainer .portal-widget-list .ui-widget-content .description{
+	display: block;
+  float: left;
+  width: 75%;
+}
+
+.start-widgetcontainer .portal-widget-list .ui-widget-content .description h1{
+	display: block;
+  font-family: "Open Sans",Verdana,Geneva,sans-serif,sans-serif;
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 42px;
+  margin-bottom: 10px;
+  color: #1d9dd9;
+}
+
+#layout-sidebar .sidebar .sidebar-widget {
+	border: none;
+}
+
+#layout-sidebar .sidebar .sidebar-widget a {
+	color: #1d9dd9;
+}
+
+#layout-sidebar .sidebar .sidebar-widget .sidebar-widget-header {
+	background: transparent !important;
+	color: #646464;
+}
 
 
 
