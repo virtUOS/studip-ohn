@@ -114,7 +114,7 @@
 	                <li class="user_menu">
 										<? if (is_object($GLOBALS['user']) && $GLOBALS['user']->id != 'nobody') : ?>
 											<a href="<?= URLHelper::getUrl('dispatch.php/start') ?>" class="user_button">
-												<? echo $GLOBALS['auth']->auth['perm']; ?>
+                                                <? echo $GLOBALS['auth']->auth['uname']; ?>
 											</a>
 											<a href="#" class="user_dropdown">
 												<?= Assets::img('/images/icons/16/grey/arr_1down.png'); ?>
