@@ -76,6 +76,15 @@
                     <img src="<?= $GLOBALS['OHN_IMAGES'] ?>/header-logo.png" alt="Logo" />
                 </a>
             </h1>
+            
+            
+            <? if ($GLOBALS['user']->id !== 'nobody') : ?>
+							<h2>
+						    <?=($current_page != "" ? htmlReady($current_page) : "")?>
+						    <?= $publi_chint ? '(' . htmlReady($public_hint) . ')' : '' ?>
+							</h2>
+						<? endif ?>
+  
   
             <ol class="left nav-global">
                 <? if (Navigation::hasItem('/header')) : ?>
@@ -106,7 +115,7 @@
                 <? if ($GLOBALS['user']->id == 'nobody') : ?>
 	                
 	                <li>
-						<a href="<?= URLHelper::getUrl('index.php?again=yes') ?>" class="login_button">Anmelden</a>
+										<a href="<?= URLHelper::getUrl('index.php?again=yes') ?>" class="login_button">Anmelden</a>
 	                </li>
 	                
 	              <? else : ?>
@@ -149,20 +158,13 @@
 							            
 										</li>
 							    <? endif ?>
-                
-                
-                
-                
+          
             </ol>
+         
         </nav>
     </header>
 
-		<? if ($GLOBALS['user']->id !== 'nobody') : ?>
-    	<h2>
-        <?=($current_page != "" ? htmlReady($current_page) : "")?>
-        <?= $publi_chint ? '(' . htmlReady($public_hint) . ')' : '' ?>
-    	</h2>
-    <? endif ?>
+		
 
 </div>
 		
