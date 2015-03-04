@@ -775,11 +775,14 @@ table {
 
 /* ALL COURSES */
 
+#mooc-courses-index #layout_container #layout_page #layout_container #layout_content {
+	overflow-y: hidden;
+}
+
 #course-list article {
 	border-bottom: 4px solid #f5f5f5 !important;
   margin: 0px !important;
   padding: 0px !important;
-  height: 192px;
 }
 
 #course-list article:last-child {
@@ -976,13 +979,22 @@ table {
 /* Sub Pages */
 
 
-
-#request_new_password #layout_content, #mooc-datenschutz, #mooc-nutzungsbedingungen, #mooc-impressum, #mooc-kontakt, #mooc-faq, #mooc-ueberuns, #mooc-ohnkursportal, #mooc-kurse, #mooc-projektpartner {
+#mooc-courses-index #layout_content #layout_page,
+#request_new_password #layout_content, 
+#mooc-datenschutz, 
+#mooc-nutzungsbedingungen, 
+#mooc-impressum, 
+#mooc-kontakt, 
+#mooc-faq, 
+#mooc-ueberuns, 
+#mooc-ohnkursportal, 
+#mooc-kurse, 
+#mooc-projektpartner {
 	width: 960px !important;
 	margin: 0px auto;
 }
 
-#mooc-datenschutz h1, #mooc-nutzungsbedingungen h1, #mooc-impressum h1, #mooc-kontakt h1, #mooc-faq h1, #mooc-ueberuns h1, #mooc-ohnkursportal h1, #mooc-kurse h1, #mooc-projektpartner h1 {
+#mooc-courses-index #layout_content #layout_page #layout_content > h1, #mooc-datenschutz h1, #mooc-nutzungsbedingungen h1, #mooc-impressum h1, #mooc-kontakt h1, #mooc-faq h1, #mooc-ueberuns h1, #mooc-ohnkursportal h1, #mooc-kurse h1, #mooc-projektpartner h1 {
 	border-bottom: 1px solid #8a8c8f;
   color: #1790c7;
   font-family: "Helvetica Neue","Helvetica","Arial",sans-serif;
@@ -995,19 +1007,33 @@ table {
   font-style: normal;
   font-synthesis: weight style;
   font-variant: normal;
-  font-weight: 300 !important;
+  font-weight: 400 !important;
   line-height: 26.64px !important;
   padding: 50px 30px 20px;
   text-align: left;
 }
 
-#mooc-datenschutz h2, #mooc-nutzungsbedingungen h2, #mooc-impressum h2, #mooc-kontakt h2, #mooc-faq h2, #mooc-ueberuns h2 {
+#mooc-courses-index #layout_content #layout_page #layout_content > h2, #mooc-datenschutz h2, #mooc-nutzungsbedingungen h2, #mooc-impressum h2, #mooc-kontakt h2, #mooc-faq h2, #mooc-ueberuns h2 {
 	color: #646464;
   letter-spacing: 1px;
   margin-bottom: 10px;
   margin-top: 30px;
   text-transform: uppercase;
 }
+
+#mooc-courses-index #layout_content #layout_page #layout_content > h1 {
+	border-bottom: none;
+	margin-bottom: 0px;
+}
+
+#mooc-courses-index #layout_content #layout_page #layout_content > h2 {
+	border-bottom: 1px solid #8a8c8f;
+	margin-top: 0px;
+	padding-left: 40px;
+	padding-bottom: 15px;
+	margin-bottom: 30px;
+}
+
 
 #mooc-datenschutz ul, #mooc-nutzungsbedingungen ul, #mooc-impressum ul, #mooc-kontakt ul, #mooc-faq ul, #mooc-ueberuns ul, #mooc-ohnkursportal ul {
 	margin: 1em 0;
@@ -1314,7 +1340,7 @@ table {
     margin-bottom: 10px;
 }
 
-.start-widgetcontainer #mooc-course-list article:after {
+.start-widgetcontainer #mooc-course-list article:after, #mooc-courses-index #course-list article:after{
     content: ".";
     display: block;
     height: 0;
