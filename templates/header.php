@@ -102,6 +102,7 @@
                                 <? endif; ?>
                                 ><?= htmlReady(strtoupper($nav->getTitle())) ?></a>
                             </li>
+                       
                         <? endif ?>
                     <? endforeach ?>
                 <? endif ?>

@@ -74,7 +74,7 @@ class OHNLayout extends StudIPPlugin implements SystemPlugin {
                 PluginEngine::getURL($this, array(), 'index/projektpartner', true));
             Navigation::insertItem('/header/projektpartner', $navigation, null);
 
-            $navigation = new Navigation('Jetzt Registrieren', 'plugins.php/mooc/courses/index');
+            $navigation = new Navigation('Jetzt für Kurs Registrieren', 'plugins.php/mooc/courses/index');
             Navigation::insertItem('/header/register', $navigation, null);
         }
 
