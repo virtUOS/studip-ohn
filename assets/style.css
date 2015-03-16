@@ -810,7 +810,13 @@ table {
 	height: auto !important;
 }
 
-#course-list article .button, #mooc-courses-show .button, #mooc-registrations-index .button, .start-widgetcontainer .portal-widget-list .button, #request_new_password .button {
+#course-list article .button, 
+#mooc-courses-show .button, 
+#mooc-registrations-index .button, 
+.start-widgetcontainer .portal-widget-list .button, 
+#request_new_password .button,
+#folder table table .printcontent .button,
+#folder .info .button {
 	 background-clip: padding-box;
     background-color: #8dcee6;
     background-image: none;
@@ -818,10 +824,11 @@ table {
     border-radius: 3px;
     box-shadow: 0 0 0 rgba(0, 0, 0, 0) inset;
     box-sizing: border-box;
-    color: #fff;
+    color: #fff !important;
     display: inline-block;
     float: left;
     font: 15px/1.6rem "Open Sans",Verdana,Geneva,sans-serif,sans-serif;
+    font-weight: 600;
     letter-spacing: 0;
     margin-top: 16px;
     padding: 6px 32px 7px;
@@ -833,7 +840,13 @@ table {
     transition: all 0.25s ease-in-out;
 }
 
-#course-list article .button:hover, #mooc-courses-show .button:hover, #mooc-registrations-index .button:hover, .start-widgetcontainer .portal-widget-list .button:hover, #request_new_password .button:hover {
+#course-list article .button:hover, 
+#mooc-courses-show .button:hover, 
+#mooc-registrations-index .button:hover, 
+.start-widgetcontainer .portal-widget-list .button:hover, 
+#request_new_password .button:hover,
+#folder table table .printcontent .button:hover,
+#folder .info .button:hover {
 	background-color: #5DC0E3;
 }
 
@@ -841,6 +854,15 @@ table {
 	left: 315px !important;
 	bottom: 24px !important;	
 	display: block !important;
+}
+
+#folder table table .printcontent .button {
+	margin: 5px;
+}
+
+#folder .info .button {
+	float: none !important;
+	margin: 5px 5px 5px 10px;
 }
 
 /*
@@ -1430,4 +1452,33 @@ table {
 	font-size: 16px !important;
 	line-height: 28px;
 }
+
+
+/* Dateibereich */
+
+#folder #filesystem_area table table .printhead, #folder #filesystem_area table table .printhead1, #folder #filesystem_area table table .printhead2, #folder #filesystem_area table table .printhead3	 {
+	background: none;
+	border-color: #8a8c8f;
+}
+
+#folder .info, #folder #filesystem_area table table, #folder #filesystem_area table table a, #folder #filesystem_area table table span, #folder #filesystem_area table table strong, #folder #filesystem_area table table p, #folder #filesystem_area table table b, #folder #filesystem_area table table tr, #folder #filesystem_area table table td {
+	font-size: 14px !important;
+}
+
+#folder #filesystem_area table table a {
+	color: #1d9dd9;
+}
+
+#folder #filesystem_area table table .printcontent {
+	background-color: transparent;
+}
+
+#folder #filesystem_area table table .tree > img {
+	padding: 7px 0px;
+}
+
+#folder #filesystem_area table table .tree-elbow-end {
+	display: none;
+}
+
 
