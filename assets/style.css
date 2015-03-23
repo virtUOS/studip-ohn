@@ -1464,10 +1464,6 @@ table {
 	padding: 0px !important;
 }
 
-#mooc-courses-show #layout_container article img {
-	width: 33.333% !important;
-}
-
 #mooc-courses-show #layout_container .sidebar {
 	border-width: 1px !important;
 	border-color: #c8c8c8 !important;
