@@ -7,12 +7,12 @@
 	</div>
 	
 	<P>Der Kurs &quot;Vom
-	Beruf ins Studium!?&quot; unterstÃ¼tzt beruflich Qualifizierte dabei,
-	eine Entscheidung fÃ¼r ein Studium zu treffen. Dabei hilft Ihnen der
-	Kurs, indem er die notwendigen Informationen gebÃ¼ndelt bereit
-	stellt, Ihnen den Austausch mit anderen ermÃ¶glicht und Sie bei Ihrem
+	Beruf ins Studium!?&quot; unterstützt beruflich Qualifizierte dabei,
+	eine Entscheidung für ein Studium zu treffen. Dabei hilft Ihnen der
+	Kurs, indem er die notwendigen Informationen gebündelt bereit
+	stellt, Ihnen den Austausch mit anderen ermöglicht und Sie bei Ihrem
 	Entscheidungsprozess begleitet. Am Ende des Kurses haben Sie einen
-	Aktionsplan fÃ¼r die Gestaltung Ihres individuellen Bildungswegs
+	Aktionsplan für die Gestaltung Ihres individuellen Bildungswegs
 	erarbeitet.
 	</P>
 	<div class="clear"></div>
@@ -24,11 +24,11 @@
 	</div>
 	
 	<P>Der Kurs &quot;HANDWERKSZEUG
-	studieren&quot; erklÃ¤rt Ihnen, welche allgemeinen, fachlichen
+	studieren&quot; erklärt Ihnen, welche allgemeinen, fachlichen
 	Anforderungen Sie in einem Hochschulstudium erwarten.  Wir zeigen
 	Ihnen, dass es im wissenschaftlichen Arbeiten um die korrekte
 	Anwendung lernbarer Arbeitstechniken geht. Wir bieten Ihnen Hinweise
-	zu Referaten und Hausarbeiten, zum Vortragen und Schreiben â€“ zu
+	zu Referaten und Hausarbeiten, zum Vortragen und Schreiben zu
 	fast allen Aufgaben, die Sie im Studium erwarten.
 	</P>
 	<div class="clear"></div>
@@ -40,12 +40,12 @@
 	</div>
 	
 	<P>Der Vorbereitungskurs &quot;Mathematik&quot;
-	befÃ¤higt Sie, zentrale mathematische Techniken zu verstehen, wie sie
-	in vielen beruflichen Anwendungen und StudienfÃ¤chern vorkommen.
+	befähigt Sie, zentrale mathematische Techniken zu verstehen, wie sie
+	in vielen beruflichen Anwendungen und Studienfächern vorkommen.
 	Neben Grundlagenwissen, das aufgefrischt wird, bietet der Kurs auch
-	eine Lesehilfe fÃ¼r das mathematische Symbolwerk und erweitert Ihre
+	eine Lesehilfe für das mathematische Symbolwerk und erweitert Ihre
 	Kenntnisse zielorientiert, so dass Sie im Studium sofort durchstarten
-	kÃ¶nnen.
+	können.
 	</P>
 	<div class="clear"></div>
 </div>

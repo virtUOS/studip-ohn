@@ -35,7 +35,6 @@ informiert.</p>
 
     <li>ermöglichen zeit- und raumunabhängiges Lernen </li>
 
-    <li>sind barrierearm konzipiert.</li>
 </ul>
 </p>
 </div>

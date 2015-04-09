@@ -7,7 +7,7 @@
 
 <p>Nachfolgend finden Sie die Allgemeinen Nutzungsbedingungen</p>
 
-<p>f&uuml;r das kostenlose Online-Angebot &bdquo;OHNâ€‘KursPortal&ldquo; der Servicestelle Offene Hochschule Niedersachsen gGmbH:</p>
+<p>f&uuml;r das kostenlose Online-Angebot &bdquo;OHN¿KursPortal&ldquo; der Servicestelle Offene Hochschule Niedersachsen gGmbH:</p>
 
 <p><h2>Geltung der Allgemeinen Nutzungsbedingungen</h2></p>
 
@@ -76,7 +76,7 @@
 	</ol>
 	</li>
 	<li>
-	<p>Die Nutzerin / der Nutzer hat sicherzustellen, dass ihre / seine angegebene Eâ€‘Mailadresse g&uuml;ltig und funktionsf&auml;hig ist.</p>
+	<p>Die Nutzerin / der Nutzer hat sicherzustellen, dass ihre / seine angegebene E¿Mailadresse g&uuml;ltig und funktionsf&auml;hig ist.</p>
 	</li>
 
 <p><br /></p>

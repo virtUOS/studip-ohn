@@ -7,13 +7,13 @@
 	</div>
 
 	<p>Der ELAN e. V. (<a href="http://www.elan-ev.de">http://www.elan-ev.de</a>) ist ein Verein, der aus dem
-	FÃ¶rderprojekt â€E-Learning Academic Networkâ€œ des Landes Niedersachsen
+	Förderprojekt ¿E-Learning Academic Network¿ des Landes Niedersachsen
 	hervorgegangen ist. Der Verein besteht seit Ende 2008 und umfasst aktuell 12
 	Mitglieder. Die Mitglieder sind Hochschulen aus Niedersachsen, die das Leitziel
-	der QualitÃ¤tsverbesserung der Lehre im Verbund des ELAN e.V. verfolgen und eine
+	der Qualitätsverbesserung der Lehre im Verbund des ELAN e.V. verfolgen und eine
 	Volkshochschule. Durch die Mitarbeiterinnen und Mitarbeiter der
-	Kompetenzbereiche des Vereins werden UnterstÃ¼tzungsmaÃŸnahmen in den Bereichen
-	Software fÃ¼r Lehre, Studium und deren Management, Rechtsfragen des E-Learning,
+	Kompetenzbereiche des Vereins werden Unterstützungsmaßnahmen in den Bereichen
+	Software für Lehre, Studium und deren Management, Rechtsfragen des E-Learning,
 	audiovisuelle Medien und Medientechnik sowie E-Assessment erbracht.
 	</p>
 	<div class="clear"></div>
@@ -24,16 +24,16 @@
 		<img src="<?= $GLOBALS['OHN_IMAGES'] ?>/partner-c3llogo.jpg" />
 	</div>
 
-	<p>Das C3L ist ein interdisziplinÃ¤res, wissenschaftliches Zentrum an der Carl
-	von Ossietzky UniversitÃ¤t Oldenburg. Es entwickelt, implementiert und evaluiert
-	berufsbegleitende Programme zur Weiterqualifikation auf universitÃ¤rem Niveau
-	und ist derzeit eines der grÃ¶ÃŸten Zentren dieser Art in Deutschland. Die
-	Programme umfassen Bachelor- und MasterstudiengÃ¤nge, Zertifikatskurse und
-	Kontaktstudien sowie Programme der Ã¶ffentlichen Wissenschaft. Dem
-	SelbstverstÃ¤ndnis des C3L folgend werden die angebotenen Programme mit
-	Fernlehr- und Onlinekomponenten unterstÃ¼tzt (sog. Blended-Learning), um den
-	Bedarfen nach Ã¶rtlicher und zeitlicher FlexibilitÃ¤t der Ã¼berwiegend
-	berufstÃ¤tigen Teilnehmenden gerecht zu werden.
+	<p>Das C3L ist ein interdisziplinäres, wissenschaftliches Zentrum an der Carl
+	von Ossietzky Universität Oldenburg. Es entwickelt, implementiert und evaluiert
+	berufsbegleitende Programme zur Weiterqualifikation auf universitärem Niveau
+	und ist derzeit eines der größten Zentren dieser Art in Deutschland. Die
+	Programme umfassen Bachelor- und Masterstudiengänge, Zertifikatskurse und
+	Kontaktstudien sowie Programme der öffentlichen Wissenschaft. Dem
+	Selbstverständnis des C3L folgend werden die angebotenen Programme mit
+	Fernlehr- und Onlinekomponenten unterstützt (sog. Blended-Learning), um den
+	Bedarfen nach örtlicher und zeitlicher Flexibilität der überwiegend
+	berufstätigen Teilnehmenden gerecht zu werden.
 	</p>
 	<div class="clear"></div>
 </div>
@@ -43,12 +43,12 @@
 		<img src="<?= $GLOBALS['OHN_IMAGES'] ?>/partner-elsalogo.gif" />
 	</div>
 
-	<p>Die eLearning Service Abteilung (elsa) ist Ansprechpartnerin fÃ¼r alle Fragen
-	des mediengestÃ¼tzten Lernens an der Leibniz UniversitÃ¤t Hannover.  Seit 2008
-	betreut sie als Teil der Zentralen Einrichtung fÃ¼r Weiterbildung die
-	Lernmanagementsysteme Stud.IP und ILIAS fÃ¼r die 22.000 Studierenden der LUH.
-	Sie bietet technischen Support fÃ¼r Studierende und Angestellte der UniversitÃ¤t,
-	berÃ¤t Lehrende, organisiert die Erstsemestertage an der Leibniz UniversitÃ¤t
+	<p>Die eLearning Service Abteilung (elsa) ist Ansprechpartnerin für alle Fragen
+	des mediengestützten Lernens an der Leibniz Universität Hannover.  Seit 2008
+	betreut sie als Teil der Zentralen Einrichtung für Weiterbildung die
+	Lernmanagementsysteme Stud.IP und ILIAS für die 22.000 Studierenden der LUH.
+	Sie bietet technischen Support für Studierende und Angestellte der Universität,
+	berät Lehrende, organisiert die Erstsemestertage an der Leibniz Universität
 	Hannover und konzipiert, organisiert und evaluiert eLearning Angebote in
 	Kooperation mit anderen Instituten, auch als (blended learning)
 	Weiterbildungen. In Verbundprojekten wie N2E2 und eCult arbeitet die eLearning
@@ -62,9 +62,9 @@
 	<div>
 		<img src="<?= $GLOBALS['OHN_IMAGES'] ?>/partner-hawklogo.jpg" />
 	</div>
-	<p>Das Zentrum fÃ¼r Information, Medien und Technologie (ZIMT) der HAWK, Hochschule fÃ¼r angewandte Wissenschaft und Kunst Hildesheim/Holzminden/GÃ¶ttingen (http://www.hawk-hhg.de) stellt als Dienstleister fÃ¼r Forschung und Lehre die technische Infrastruktur fÃ¼r die drei HAWK-Standorte Hildesheim, Holzminden und GÃ¶ttingen bereit. 
-Bibliotheken, Rechenzentrum und eLearning-Team bilden gemeinsam das ZIMT, das damit den Kommunikationsfluss, die Beschaffung von Informationen und den Austausch von Daten im Bildungskreislauf zwischen Wissensgenerierung und Wissensvermittlung gewÃ¤hrleistet.
-ZIMT eLearning unterstÃ¼tzt dabei alle HochschulangehÃ¶rigen beim Einsatz von eLearning-Komponenten und zeigt, wie man digitale Werkzeuge didaktisch einsetzen kann. Im Mittelpunkt stehen hierbei die Lehrenden mit Ihren Erfahrungen und Vorhaben.
+	<p>Das Zentrum für Information, Medien und Technologie (ZIMT) der HAWK, Hochschule für angewandte Wissenschaft und Kunst Hildesheim/Holzminden/Göttingen (http://www.hawk-hhg.de) stellt als Dienstleister für Forschung und Lehre die technische Infrastruktur für die drei HAWK-Standorte Hildesheim, Holzminden und Göttingen bereit. 
+Bibliotheken, Rechenzentrum und eLearning-Team bilden gemeinsam das ZIMT, das damit den Kommunikationsfluss, die Beschaffung von Informationen und den Austausch von Daten im Bildungskreislauf zwischen Wissensgenerierung und Wissensvermittlung gewährleistet.
+ZIMT eLearning unterstützt dabei alle Hochschulangehörigen beim Einsatz von eLearning-Komponenten und zeigt, wie man digitale Werkzeuge didaktisch einsetzen kann. Im Mittelpunkt stehen hierbei die Lehrenden mit Ihren Erfahrungen und Vorhaben.
 	</p>
 	<div class="clear"></div>
 </div>
