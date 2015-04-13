@@ -816,7 +816,9 @@ table {
 .start-widgetcontainer .portal-widget-list .button, 
 #request_new_password .button,
 #folder table table .printcontent .button,
-#folder .info .button {
+#folder .info .button,
+table.default .button,
+#forum .button {
 	 background-clip: padding-box;
     background-color: #8dcee6;
     background-image: none;
@@ -846,7 +848,9 @@ table {
 .start-widgetcontainer .portal-widget-list .button:hover, 
 #request_new_password .button:hover,
 #folder table table .printcontent .button:hover,
-#folder .info .button:hover {
+#folder .info .button:hover,
+table.default .button:hover,
+#forum .button:hover {
 	background-color: #5DC0E3;
 }
 
@@ -863,6 +867,19 @@ table {
 #folder .info .button {
 	float: none !important;
 	margin: 5px 5px 5px 10px;
+}
+
+table.default .button {
+	float: none;
+}
+
+#forum .button-group .button {
+	margin: 5px;
+	padding: 4px 10px;
+}
+
+#forum #tutorAddCategory .button {
+	float: none;
 }
 
 /*
@@ -921,7 +938,7 @@ table {
 	font-size: 15px !important;
 }
 
-.logintable form input {
+.logintable form input, #forum #tutorAddCategory input {
 	margin: 0;
   padding: 10px 15px;
   width: 100%;
@@ -934,6 +951,10 @@ table {
   font-weight: 500;
   font-size: 16px !important;
   height: auto;
+}
+
+#forum #tutorAddCategory input {
+	width: auto;
 }
 
 .logintable form table tfoot {
@@ -1498,8 +1519,8 @@ table {
 /* Dateibereich */
 
 #folder #filesystem_area table table .printhead, #folder #filesystem_area table table .printhead1, #folder #filesystem_area table table .printhead2, #folder #filesystem_area table table .printhead3	 {
-	background: none;
-	border-color: #8a8c8f;
+	background: none !important;
+	border-color: #8a8c8f !important;
 }
 
 #folder .info, #folder #filesystem_area table table, #folder #filesystem_area table table a, #folder #filesystem_area table table span, #folder #filesystem_area table table strong, #folder #filesystem_area table table p, #folder #filesystem_area table table b, #folder #filesystem_area table table tr, #folder #filesystem_area table table td {
@@ -1523,3 +1544,39 @@ table {
 }
 
 
+/* Teilnehmer */
+
+table.default caption, table.default tr, table.default th, table.default td {
+	color: #646464;
+	border-color: #8a8c8f !important;
+}
+
+table.default tbody td {
+	border-color: #EFEFEF !important;
+}
+
+table.default caption .actions {
+	border-color: #8a8c8f !important;
+}
+
+table.default tr.sortable, table.default thead th, table.default tfoot, table.default tfoot td {
+	background-color: transparent;
+}
+
+table.default a {
+	color: #1d9dd9;
+}
+
+table.default thead {
+	background: #fff !important;
+}
+
+/* Forum */
+
+#forum a {
+	color: #1d9dd9;
+}
+
+#forum .posting {
+	background-color: #EFEFEF !important;
+}
