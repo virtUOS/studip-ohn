@@ -80,9 +80,10 @@ class OHNLayout extends StudIPPlugin implements SystemPlugin {
         $navigation = new Navigation('Logout',
                 PluginEngine::getURL($this, array(), 'index/logout', true));
         Navigation::insertItem('/links/logout', $navigation, null);
+
         $navigation = new Navigation('Profil',
                 URLHelper::getUrl('dispatch.php/profile'));
-        Navigation::insertItem('/links/profil', $navigation, null);
+        Navigation::insertItem('/links/profil', $navigation, 'logout');
     }
 
     public function perform($unconsumed_path)
