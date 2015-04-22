@@ -3,16 +3,15 @@
 
 @import url("main.css");
 
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800);
 
 body {
   background-image: none !important;
   background-color: #fff !important;
-  font-family: "Open Sans",Verdana,Geneva,sans-serif,sans-serif !important;
+  font-family: Verdana,Geneva,sans-serif,sans-serif !important;
 }
 
 body, h1, h2, h3, h4, h5, p, div, a {
-	font-family: "Open Sans",Verdana,Geneva,sans-serif,sans-serif !important;
+	font-family: Verdana,Geneva,sans-serif,sans-serif !important;
 }
 
 #layout_wrapper {
@@ -829,7 +828,7 @@ table.default .button,
     color: #fff !important;
     display: inline-block;
     float: left;
-    font: 15px/1.6rem "Open Sans",Verdana,Geneva,sans-serif,sans-serif;
+    font: 15px/1.6rem Verdana,Geneva,sans-serif,sans-serif;
     font-weight: 600;
     letter-spacing: 0;
     margin-top: 16px;
@@ -946,7 +945,7 @@ table.default .button {
   border: 1px solid #C8C8C8;
   color: #3c3c3c;
   display: block;
-  font-family: "Open Sans",Verdana,Geneva,sans-serif,sans-serif;
+  font-family: Verdana,Geneva,sans-serif,sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 16px !important;
@@ -994,7 +993,7 @@ table.default .button {
 #request_new_password #layout_content {
 	background: transparent;
 	color: #646464;
-	font-family: "Open Sans", sans-serif;
+	font-family:  sans-serif;
 }
 
 #request_new_password #layout_content .table_header_bold {
@@ -1260,7 +1259,7 @@ table.default .button {
   border-radius: 3px;
   box-shadow: 0 0 0 rgba(0, 0, 0, 0) inset;
   box-sizing: border-box;
-  font: 15px/1.6rem "Open Sans",Verdana,Geneva,sans-serif,sans-serif;
+  font: 15px/1.6rem Verdana,Geneva,sans-serif,sans-serif;
   letter-spacing: 0;
   padding: 6px 32px 7px;
   text-align: center;
@@ -1440,7 +1439,7 @@ table.default .button {
 
 .start-widgetcontainer .portal-widget-list .ui-widget-content .description h1{
 	display: block;
-  font-family: "Open Sans",Verdana,Geneva,sans-serif,sans-serif;
+  font-family: Verdana,Geneva,sans-serif,sans-serif;
   font-size: 34px;
   font-weight: 400;
   line-height: 42px;
