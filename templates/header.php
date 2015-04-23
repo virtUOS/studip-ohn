@@ -9,7 +9,7 @@
     <div id="flex-header">
         <div id="header">
             <!--<div id='barTopLogo'>
-                <img src="<?=$GLOBALS['ASSETS_URL']?>images/logos/logoneu.jpg" alt="Logo Uni Göttingen">
+                <img src="<?=$GLOBALS['ASSETS_URL']?>images/logos/logoneu.jpg" alt="Logo Uni GÃ¶ttingen">
             </div>
              -->
             <div id="barTopFont">
@@ -81,7 +81,7 @@
             <? if ($GLOBALS['user']->id !== 'nobody') : ?>
 							<h2>
 						    <?=($current_page != "" ? htmlReady($current_page) : "")?>
-						    <?= $publi_chint ? '(' . htmlReady($public_hint) . ')' : '' ?>
+						    <?= $publi_hint ? '(' . htmlReady($public_hint) . ')' : '' ?>
 							</h2>
 						<? endif ?>
   
