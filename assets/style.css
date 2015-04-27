@@ -1580,3 +1580,26 @@ table.default thead {
 	background-color: #EFEFEF !important;
 }
 
+
+/* Informationen */
+
+table.default.scm.nohover .content_body {
+	background-color: transparent !important;
+}
+
+table.default.scm.nohover .content_body p, a, ul, ol, li, tr, td {
+	font-size: 14px !important;
+	line-height: 24px !important;
+}
+
+table.default.scm.nohover .content_body ul {
+	padding-left: 30px;
+}
+
+table.default.scm.nohover .content_body h3 {
+	margin-top: 40px;
+}
+
+
+
+
