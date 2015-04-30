@@ -1463,7 +1463,7 @@ table.default .button {
 /* content */
 
 .HtmlBlock .block-content ul {
-	padding-left: 20px;
+	padding-left: 40px;
 }
 
 .active-section .block-adder button {
@@ -1598,6 +1598,15 @@ table.default.scm.nohover .content_body ul {
 
 table.default.scm.nohover .content_body h3 {
 	margin-top: 40px;
+}
+
+
+section#courseware ol {
+	list-style: decimal !important;
+}
+
+section#courseware ul {
+	list-style: disc !important;
 }
 
 
