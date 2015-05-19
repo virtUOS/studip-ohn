@@ -1580,7 +1580,6 @@ table.default thead {
 	background-color: #EFEFEF !important;
 }
 
-
 /* Informationen */
 
 table.default.scm.nohover .content_body {
@@ -1609,6 +1608,10 @@ section#courseware .HtmlBlock .block-content ul {
 	list-style: disc !important;
 }
 
+/* Coursedetails */
 
-
-
+.ui-icon {
+	display: block ! important;
+	background-repeat: no-repeat ! important;
+	padding-top: 10px ! important;
+}
