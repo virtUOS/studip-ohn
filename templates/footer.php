@@ -2,7 +2,7 @@
 # Lifter010: TODO
 ?>
     <!-- Beginn Footer -->
-    <div id="layout_footer">
+    <div id="layout_footer" class="ohn">
       <ul class="footer_navigation_main">
       <? if (Navigation::hasItem('/footer')) : ?>
       <? foreach (Navigation::getItem('/footer') as $nav) : ?>

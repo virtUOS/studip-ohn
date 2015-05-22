@@ -12,3 +12,11 @@
         </span>
     </p>
 </div>
+
+<?= $GLOBALS['template_factory']->open('footer')->render() ?>
+
+<style>
+    #layout_footer:not(.ohn) {
+        display: none;
+    }
+</style>
