@@ -17,7 +17,8 @@ class OHNLayout extends StudIPPlugin implements SystemPlugin {
     public function __construct() {
         parent::__construct();
         
-        #var_dump($GLOBALS['template_factory']);
+        $GLOBALS['default_factory'] = $GLOBALS['template_factory'];
+
         $GLOBALS['template_factory'] = new OHN\FactoryProxy(
             $GLOBALS['template_factory'], 
             realpath($this->getPluginPath() . '/templates')
