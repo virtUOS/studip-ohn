@@ -230,9 +230,6 @@ textarea {
 .lt-ie9 body {
     min-width: 920px;
 }
-body {
-    overflow-y: scroll;
-}
 p, li, a, em, strong, i, b, dt, dd, blockquote, figcaption, label, input, select, option, button, textarea {
     font-size: 0.875em;
 }
