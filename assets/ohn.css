@@ -2302,7 +2302,7 @@ html.js .newsletter-form {
     background-color: #8DCEE6;
 }
 @media only screen and (max-width: 1020px) {
-body {
+html {
     overflow-x: hidden;
 }
 }
