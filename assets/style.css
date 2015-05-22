@@ -1013,7 +1013,7 @@ table.default .button {
 }
 
 .logintable .button.accept:before {
-	background-image: url("../../../../assets/images/icons/32/white/accept.png");
+	background-image: url("../../../../assets/images/icons/16/white/accept.png");
 }
 
 .messagebox {
