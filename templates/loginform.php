@@ -6,7 +6,7 @@
         <br><br>
 
         <span>
-            <a href="<?= URLHelper::getUrl('plugins.php/ohnlayout/index/kurse?cancel_login=1') ?>">
+            <a href="<?= URLHelper::getUrl('plugins.php/mooc/courses/index?cancel_login=1') ?>">
                 <?= _('Registrieren Sie sich zunächst für einen Kurs um einen Account zu erhalten.') ?>
             </a>
         </span>
