@@ -14,6 +14,10 @@ body, h1, h2, h3, h4, h5, p, div, a {
 	font-family: Verdana,Geneva,sans-serif,sans-serif !important;
 }
 
+a, a:link, a:visited {
+	color: #1d9dd9;
+}
+
 #layout_wrapper {
   min-width: 980px;
   max-width: 1200px;
@@ -178,6 +182,11 @@ section#courseware ol.chapters li.selected > .subchapters > li.selected > .title
 
 section#courseware ol.active-subchapter {
 	padding: 30px 10px 10px 0px !important;
+}
+
+section#courseware ol.active-subchapter.stuck {
+	padding: 10px 10px 10px 0px !important;
+	top: 0px !important;
 }
 
 section#courseware ol.active-subchapter li > a {
