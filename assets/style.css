@@ -1486,11 +1486,10 @@ table.default .button {
 	padding-left: 40px;
 }
 
-/*
 .block-content table td {
 	border: none;
+	padding: 0px 15px;
 }
-*/
 
 .active-section .block-adder button {
 	margin: 5px !important;
