@@ -779,6 +779,17 @@ table {
 
 /* ALL COURSES */
 
+#mooc-courses-index #layout_container #course-list article {
+	min-height: 190px !important;
+}
+
+#mooc-courses-index #layout_container #course-list article .subtitle {
+	bottom: 30px;
+  margin-bottom: 0;
+  position: absolute;
+  right: 0;
+}
+
 #mooc-courses-index #layout_container #layout_page #layout_container #layout_content {
 	overflow-y: hidden;
 }
@@ -1474,6 +1485,12 @@ table.default .button {
 .HtmlBlock .block-content ul {
 	padding-left: 40px;
 }
+
+/*
+.block-content table td {
+	border: none;
+}
+*/
 
 .active-section .block-adder button {
 	margin: 5px !important;
