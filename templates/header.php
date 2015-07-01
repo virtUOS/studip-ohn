@@ -182,3 +182,11 @@
 
 <div id="layout_container">
     <div id="layout_content">
+        <? if (is_object($GLOBALS['user']) && $GLOBALS['user']->id != 'nobody') : ?>
+            <? $user = User::findByUsername($GLOBALS['user']->username);?>
+            <div id="userdata">
+                <input id="username" type="hidden" value="<?= $user->username;?>">
+                <input id="userfullname" type="hidden" value="<?= $user->vorname." ".$user->nachname ;?>">
+                <input id="usermail" type="hidden" value="<?= $user->email;?>">
+            </div>
+        <? endif ?>

@@ -1640,3 +1640,37 @@ section#courseware .HtmlBlock .block-content ul {
 	background-repeat: no-repeat ! important;
 	padding-top: 10px ! important;
 }
+
+
+/* Dashboard */
+
+.sidebar-widget-header.ohn-dashboard{
+    border: solid 1px #ccc !important;;
+    border-radius: 5px !important;;
+    padding: 25px !important;;
+     
+  }
+.sidebar-widget-content.ohn-dashboard .widget-list{
+    border: solid 1px #ccc !important;
+    margin-top: -5px !important;
+    background-color: #fafafa !important;
+    
+  }
+.sidebar-widget-content.ohn-dashboard  .widget-list li{
+    padding:  10px 20px !important;
+    border-bottom: 1px dotted #888;
+    
+  }
+.sidebar-widget-content.ohn-dashboard .widget-list li:last-child{
+    border: none;
+    
+  }
+.sidebar-widget-content.ohn-dashboard .widget-list a{
+     font-size: 0.9em !important;
+     vertical-align: baseline; 
+     
+   }
+.sidebar-widget-content.ohn-dashboard .widget-list b{
+     font-size: 1.2em;
+    
+  }
