@@ -1645,9 +1645,10 @@ section#courseware .HtmlBlock .block-content ul {
 /* Dashboard */
 
 .sidebar-widget-header.ohn-dashboard{
-    border: solid 1px #ccc !important;;
-    border-radius: 5px !important;;
-    padding: 25px !important;;
+    border: solid 1px #ccc !important;
+    border-radius: 5px !important;
+    padding: 25px !important;
+    text-align: center;
      
   }
 .sidebar-widget-content.ohn-dashboard .widget-list{

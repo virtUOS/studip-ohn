@@ -12,15 +12,13 @@
 			    $(this).css("padding-right", "15px");
 			  }
 	    });
-		});
+    
         
         // dashboard clean up
         if ($('.start-widgetcontainer').length > 0){
-          $('.ui-widget_head span:contains("OHN-Kurse")').siblings().hide();
-          $('.sidebar-widget-header:contains("Sprungmarken")').parent().hide();
-          $('.sidebar-widget-header:contains("Aktionen")').parent().hide();
-          var $editname = "https://ohn-kursportal.de/dispatch.php/settings/account";
-          var $editpass = "https://ohn-kursportal.de/dispatch.php/settings/password";
+          $('.sidebar-widget').hide();
+          var $linksettings = $('#linksettings').val();
+          var $linkpassword = $('#linkpassword').val();
           var $username = $('#username').val();
           var $userfullname = $('#userfullname').val();
           var $usermail = $('#usermail').val();
@@ -32,16 +30,16 @@
               '</div>'+
               '<div class="sidebar-widget-content ohn-dashboard">'+
               '<ul class="widget-list">'+
-            '<li><p>voller Name (<a href="'+$editname+'">bearbeiten</a>):</p><b>'+$userfullname+'</b></li>'+
-            '<li><p>E-Mail (<a href="'+$editname+'">bearbeiten</a>):</p><b>'+$usermail+'</b></li>'+
-            '<li><a href="'+$editpass+'">Passwort ändern</a></li>'+
+            '<li><p>voller Name (<a href="'+$linksettings+'">bearbeiten</a>):</p><b>'+$userfullname+'</b></li>'+
+            '<li><p>E-Mail (<a href="'+$linksettings+'">bearbeiten</a>):</p><b>'+$usermail+'</b></li>'+
+            '<li><a href="'+$linkpassword+'">Passwort ändern</a></li>'+
               '</ul>'+
               '</div>'+
             '</div>'  
           );
         }
     
-    
+    });
     
 
 }(jQuery));

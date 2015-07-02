@@ -188,5 +188,7 @@
                 <input id="username" type="hidden" value="<?= $user->username;?>">
                 <input id="userfullname" type="hidden" value="<?= $user->vorname." ".$user->nachname ;?>">
                 <input id="usermail" type="hidden" value="<?= $user->email;?>">
+                <input id="linksettings" type="hidden" value="<?= URLHelper::getLink('dispatch.php/settings/account', $header_template->link_params) ?>">
+                <input id="linkpassword" type="hidden" value="<?= URLHelper::getLink('dispatch.php/settings/password', $header_template->link_params) ?>">
             </div>
         <? endif ?>
