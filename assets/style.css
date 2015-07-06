@@ -129,6 +129,10 @@ section#courseware ol.chapters > li > .title > a {
 	background-size: 7px 7px;
 }
 
+section#courseware ol.chapters .chapter div.title a .indented {
+	display: inline-block;
+}
+
 section#courseware ol.chapters li.selected {
   background-color: #8DCEE6 !important;
 }
