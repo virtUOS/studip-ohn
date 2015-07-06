@@ -1486,6 +1486,13 @@ table.default .button {
 	padding-left: 40px;
 }
 
+.TestBlock .block-content li {
+	box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	-o-box-sizing: content-box;
+}
+
 .block-content table td {
 	border: none;
 	padding: 0px 15px;
