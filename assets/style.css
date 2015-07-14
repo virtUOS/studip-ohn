@@ -18,6 +18,11 @@ a, a:link, a:visited {
 	color: #1d9dd9;
 }
 
+a.link-extern::before {
+	content: none !important;
+	display: none !important;
+}
+
 #layout_wrapper {
   min-width: 980px;
   max-width: 1200px;
@@ -1511,6 +1516,12 @@ table.default .button {
 	line-height: 28px;
 }
 
+table.solution td {
+	border-bottom: 1px solid #eee !important;
+	padding-top: 5px !important;
+	padding-bottom: 5px !important;
+}
+
 
 /* Kursübersicht */
 
@@ -1651,7 +1662,6 @@ section#courseware .HtmlBlock .block-content ul {
 	background-repeat: no-repeat ! important;
 	padding-top: 10px ! important;
 }
-
 
 /* Dashboard */
 
