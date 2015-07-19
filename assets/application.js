@@ -5,6 +5,18 @@
 		    $(".user_menu ul").toggle();
 	    });
 	    
+	    
+	    
+	    // courseware section height
+	    var chaptersheight = 0;
+	    $("section#courseware ol.chapters > li").each(function() {
+		    chaptersheight += $(this).height();
+	    });
+
+			$("section#courseware").css("min-height", chaptersheight+"px");
+	    
+
+
 	    $(".start-widgetcontainer .portal-widget-list .ui-widget-content article img").wrap("<div class='widget_image_wrapper'></div>");
 	    
 	    $("#mooc-courses-show #layout_container .description img").each(function() {

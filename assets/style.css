@@ -304,7 +304,9 @@ section#courseware ol.active-subchapter li.selected > a[data-icon="video"] {
 
 
 
-
+section.TestBlock p.solution.cloze .correct_answer, section.TestBlock p.solution.cloze .incorrect_answer, section.TestBlock p.solution.cloze .correction {
+	white-space: normal !important;
+}
 
 
 h1, h2, h3, h4 {
@@ -1516,7 +1518,7 @@ table.default .button {
 	line-height: 28px;
 }
 
-table.solution td {
+.exercise table.solution td {
 	border-bottom: 1px solid #eee !important;
 	padding-top: 5px !important;
 	padding-bottom: 5px !important;
