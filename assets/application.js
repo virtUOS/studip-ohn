@@ -13,7 +13,7 @@
 		    chaptersheight += $(this).height();
 	    });
 
-			$("section#courseware").css("min-height", chaptersheight+"px");
+			$("section#courseware").css("min-height", chaptersheight+220+"px");
 	    
 
 
