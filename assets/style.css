@@ -127,7 +127,7 @@ section#courseware ol.chapters > li > .title > a {
   padding: 15px 30px !important;
   width: 100% !important;
   display: block !important;
-  font-size: 1em !important;
+  font-size: 1.2em !important;
   background-image: url("../../../../assets/images/icons/16/grey/arr_1right.png");
 	background-repeat: no-repeat;
 	background-position: 17px center; 
@@ -159,7 +159,7 @@ section#courseware ol.chapters li.selected ol.subchapters {
 section#courseware ol.chapters li.selected > .subchapters a {
   display: block !important; 
   width: 100% !important;
-  font-size: 1.2em !important;
+  font-size: 1.1em !important;
   margin: 2px 0px;
   color: #000 !important;
 }
@@ -1591,6 +1591,12 @@ table.default .button {
 	padding-left: 40px;
 }
 
+#courseware .block textarea {
+	min-height: 50px;
+	height: 100px;
+	width: 100%;
+}
+
 .TestBlock .block-content li {
 	box-sizing: content-box;
 	-moz-box-sizing: content-box;
@@ -1601,6 +1607,10 @@ table.default .button {
 .block-content table td {
 	border: none;
 	padding: 0px 15px;
+}
+
+.block-content ul li {
+	font-size: 16px !important;
 }
 
 .active-section .block-adder button {
