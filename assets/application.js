@@ -29,6 +29,7 @@
         // dashboard clean up
         if ($('.start-widgetcontainer').length > 0){
           $('.sidebar-widget').hide();
+          $('.ui-widget_head').hide();
           var $linksettings = $('#linksettings').val();
           var $linkpassword = $('#linkpassword').val();
           var $username = $('#username').val();
