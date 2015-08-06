@@ -1609,8 +1609,12 @@ table.default .button {
 	padding: 0px 15px;
 }
 
-.block-content ul li {
+.block-content ul li, .block-content ol li, .block-content a, .block-content td, .block-content strong {
 	font-size: 16px !important;
+}
+
+.block-content ul li, .block-content ol li, .block-content td {
+	color: #666;
 }
 
 .active-section .block-adder button {
