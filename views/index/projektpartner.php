@@ -21,25 +21,6 @@
 
 <div class="list_item">
 	<div>
-		<img src="<?= $GLOBALS['OHN_IMAGES'] ?>/partner-c3llogo.jpg" />
-	</div>
-
-	<p>Das C3L ist ein interdisziplinäres, wissenschaftliches Zentrum an der Carl
-	von Ossietzky Universität Oldenburg. Es entwickelt, implementiert und evaluiert
-	berufsbegleitende Programme zur Weiterqualifikation auf universitärem Niveau
-	und ist derzeit eines der größten Zentren dieser Art in Deutschland. Die
-	Programme umfassen Bachelor- und Masterstudiengänge, Zertifikatskurse und
-	Kontaktstudien sowie Programme der öffentlichen Wissenschaft. Dem
-	Selbstverständnis des C3L folgend werden die angebotenen Programme mit
-	Fernlehr- und Onlinekomponenten unterstützt (sog. Blended-Learning), um den
-	Bedarfen nach örtlicher und zeitlicher Flexibilität der überwiegend
-	berufstätigen Teilnehmenden gerecht zu werden.
-	</p>
-	<div class="clear"></div>
-</div>
-
-<div class="list_item">
-	<div>
 		<img src="<?= $GLOBALS['OHN_IMAGES'] ?>/partner-elsalogo.gif" />
 	</div>
 
