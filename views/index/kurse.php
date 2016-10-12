@@ -39,13 +39,43 @@
 	<img src="<?= $GLOBALS['OHN_IMAGES'] ?>/rechnung_b.jpg" />
 	</div>
 	
-	<P>Der Vorbereitungskurs &quot;Mathematik&quot;
+	<P>Der &quot;Allgemeine Vorbereitungskurs Mathematik&quot;
 	befähigt Sie, zentrale mathematische Techniken zu verstehen, wie sie
 	in vielen beruflichen Anwendungen und Studienfächern vorkommen.
 	Neben Grundlagenwissen, das aufgefrischt wird, bietet der Kurs auch
 	eine Lesehilfe für das mathematische Symbolwerk und erweitert Ihre
 	Kenntnisse zielorientiert, so dass Sie im Studium sofort durchstarten
 	können.
+	</P>
+	<div class="clear"></div>
+</div>
+
+<div class="list_item">
+	<div>
+	<img src="<?= $GLOBALS['OHN_IMAGES'] ?>/TI_vorspann_gesamt_titel.png" />
+	</div>
+	
+	<P>Der Kurs &quot;Mathematik zur Informatik&quot; zeigt anhand einiger ausgewählter Themen und Beispiele, in welchem Rahmen und in welcher Form die Mathematik in einem Informatik-Studium zum Einsatz kommt. Dabei wird die typische Sprechweise und Argumentation von Mathematikern verwendet. Exemplarisch werden Beweistechniken vorgestellt.
+	</P>
+	<div class="clear"></div>
+</div>
+
+<div class="list_item">
+	<div>
+	<img src="<?= $GLOBALS['OHN_IMAGES'] ?>/preview.jpg" />
+	</div>
+	
+	<P>Der Kurs &quot;Mathematik für Wirtschaftswissenschaften&quot; vermittelt zielgerichtet mathematische Grundlagenkenntnisse für den Einstieg in ein Studium der Wirtschaftswissenschaften. Inhaltlich geht es um den Umgang mit Zahlenmengen, Bruchrechnung, das Lösen von einfachen (Un-)Gleichungen mit Produkt- und Summenoperator, Analysis von Funktionen mit einer oder mehreren Variablen im Rahmen von Kurvendiskussionen, Lineare Algebra sowie Matrizenrechnung und Grundzüge der Integralrechnung.
+	</P>
+	<div class="clear"></div>
+</div>
+
+<div class="list_item">
+	<div>
+	<img src="<?= $GLOBALS['OHN_IMAGES'] ?>/OHN-MA1_preview.png" />
+	</div>
+	
+	<P>Der Kurs &quot;Mathematik für Ingenieurwissenschaften&quot; festigt und erweitert das Fundament für die weitere Beschäftigung mit mathematischen Verfahren im Bereich der Ingenieurwissenschaften. Inhaltlich geht es um Trigonometrie, Vektorrechnung, Lineare Gleichungssysteme und Matrizen, Koeffizientenvergleich, Berechnung von Grenzwerten sowie Ableitungen und Integrale. 
 	</P>
 	<div class="clear"></div>
 </div>
