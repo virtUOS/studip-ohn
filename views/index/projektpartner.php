@@ -7,7 +7,7 @@
 	</div>
 
 	<p>Der ELAN e. V. (<a href="http://www.elan-ev.de">http://www.elan-ev.de</a>) ist ein Verein, der aus dem
-	Förderprojekt ¿E-Learning Academic Network¿ des Landes Niedersachsen
+	Förderprojekt „E-Learning Academic Network“ des Landes Niedersachsen
 	hervorgegangen ist. Der Verein besteht seit Ende 2008 und umfasst aktuell 12
 	Mitglieder. Die Mitglieder sind Hochschulen aus Niedersachsen, die das Leitziel
 	der Qualitätsverbesserung der Lehre im Verbund des ELAN e.V. verfolgen und eine
@@ -46,6 +46,18 @@
 	<p>Das Zentrum für Information, Medien und Technologie (ZIMT) der HAWK, Hochschule für angewandte Wissenschaft und Kunst Hildesheim/Holzminden/Göttingen (http://www.hawk-hhg.de) stellt als Dienstleister für Forschung und Lehre die technische Infrastruktur für die drei HAWK-Standorte Hildesheim, Holzminden und Göttingen bereit. 
 Bibliotheken, Rechenzentrum und eLearning-Team bilden gemeinsam das ZIMT, das damit den Kommunikationsfluss, die Beschaffung von Informationen und den Austausch von Daten im Bildungskreislauf zwischen Wissensgenerierung und Wissensvermittlung gewährleistet.
 ZIMT eLearning unterstützt dabei alle Hochschulangehörigen beim Einsatz von eLearning-Komponenten und zeigt, wie man digitale Werkzeuge didaktisch einsetzen kann. Im Mittelpunkt stehen hierbei die Lehrenden mit Ihren Erfahrungen und Vorhaben.
+	</p>
+	<div class="clear"></div>
+</div>
+        <div class="list_item">
+	<div>
+		<img src="<?= $GLOBALS['OHN_IMAGES'] ?>/virtuos-logo.jpg" />
+	</div>
+	<p>Das Zentrum für Informationsmanagement und Virtuelle Lehre (virtUOS) der Universität Osnabrück ist eine zentrale 
+            Forschungs- und Serviceeinrichtung der Universität mit der Aufgabe, innovative Technologien im Umfeld von Lehre 
+            und Hochschulorganisation zu erforschen bzw. zu entwickeln und in Kooperation mit anderen Institutionen der 
+            Hochschule prozessbasiert einzuführen. virtUOS besteht aus den drei Geschäftsbereichen „Forschung“, 
+            „Entwicklung“ und „Unterstützung“.
 	</p>
 	<div class="clear"></div>
 </div>
