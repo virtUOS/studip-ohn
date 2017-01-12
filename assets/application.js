@@ -52,6 +52,12 @@
           );
         }
     
+        if($("section#courseware").length ){
+             setTimeout(function(){
+                stickySidebar(false);
+              }, 2000);  
+            }
+    
             });
     
 
