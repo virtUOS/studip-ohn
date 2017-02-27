@@ -1,31 +1,29 @@
 (function ($) {
 
     $(document).ready(function() {
-	    $(".user_dropdown").click(function() {
-		    $(".user_menu ul").toggle();
-	    });
-	    
-	    
-	    
-	    // courseware section height
-	    var chaptersheight = 0;
-	    $("section#courseware ol.chapters > li").each(function() {
-		    chaptersheight += $(this).height();
-	    });
+        $(".user_dropdown").click(function() {
+            $(".user_menu ul").toggle();
+        });
 
-			$("section#courseware").css("min-height", chaptersheight+220+"px");
-	    
+        // courseware section height
+        var chaptersheight = 0;
+        $("section#courseware ol.chapters > li").each(function() {
+            chaptersheight += $(this).height();
+        });
+
+            $("section#courseware").css("min-height", chaptersheight+220+"px");
 
 
-	    $(".start-widgetcontainer .portal-widget-list .ui-widget-content article img").wrap("<div class='widget_image_wrapper'></div>");
-	    
-	    $("#mooc-courses-show #layout_container .description img").each(function() {
-		    if( $("#mooc-courses-show #layout_container .description img").css("float") == "left" ) {
-			    $(this).css("padding-right", "15px");
-			  }
-	    });
-    
-        
+
+        $(".start-widgetcontainer .portal-widget-list .ui-widget-content article img").wrap("<div class='widget_image_wrapper'></div>");
+
+        $("#mooc-courses-show #layout_container .description img").each(function() {
+            if( $("#mooc-courses-show #layout_container .description img").css("float") == "left" ) {
+                $(this).css("padding-right", "15px");
+              }
+        });
+
+
         // dashboard clean up
         if ($('.start-widgetcontainer').length > 0){
           $('.sidebar-widget').hide();
@@ -48,17 +46,14 @@
             '<li><a href="'+$linkpassword+'">Passwort ändern</a></li>'+
               '</ul>'+
               '</div>'+
-            '</div>'  
+            '</div>'
           );
         }
-    
-        if($("section#courseware").length ){
-             setTimeout(function(){
-                stickySidebar(false);
-              }, 2000);  
-            }
-    
-            });
-    
+
+        setTimeout(function(){
+            stickySidebar(false);
+        }, 2000);
+    });
+
 
 }(jQuery));

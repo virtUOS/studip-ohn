@@ -17,27 +17,36 @@
         <? foreach (Navigation::getItem('/') as $path => $nav) : ?>
             <? if ($nav->isVisible(true)) : ?>
                 <?
-                $accesskey_attr = '';
-                $image = $nav->getImage();
+                    $accesskey_attr = '';
+                    $image = $nav->getImage();
+                    $link_attributes = $nav->getLinkAttributes();
 
-                if ($accesskey_enabled) {
-                    $accesskey = ++$accesskey % 10;
-                    $accesskey_attr = 'accesskey="' . $accesskey . '"';
-                    $image['title'] .= "  [ALT] + $accesskey";
-                }
+                    // Add access key to link attributes
+                    if ($accesskey_enabled) {
+                        $accesskey = ++$accesskey % 10;
+                        $link_attributes['accesskey'] = $accesskey;
+                        $link_attributes['title']    .= "  [ALT] + $accesskey";
+                    }
 
-                $badge_attr = '';
-                if ($nav->hasBadgeNumber()) {
-                    $badge_attr = ' class="badge" data-badge-number="' . intval($nav->getBadgeNumber())  . '"';
-                }
+                    // Add badge number to link attributes
+                    if ($nav->getBadgeNumber()) {
+                        $link_attributes['data-badge'] = (int)$nav->getBadgeNumber();
+                    }
 
-                ?>
-                <li id="nav_<?= $path ?>"<? if ($nav->isActive()) : ?> class="active"<? endif ?>>
-                    <a href="<?= URLHelper::getLink($nav->getURL(), $link_params) ?>" title="<?= $image['title'] ?>" <?= $accesskey_attr ?><?= $badge_attr ?>>
-                       <span style="background-image: url('<?= $image['src'] ?>'); background-size: auto 32px;" class="<?= $image['class'] ?>"> </span><br>
-                       <?= htmlReady($nav->getTitle()) ?>
-                   </a>
-                </li>
+                    // Convert link attributes array to proper attribute string
+                    $attr_str = '';
+                    foreach ($link_attributes as $key => $value) {
+                        $attr_str .= sprintf(' %s="%s"', htmlReady($key), htmlReady($value));
+                    }
+
+                    ?>
+                    <li id="nav_<?= $path ?>"<? if ($nav->isActive()) : ?> class="active"<? endif ?>>
+                        <a href="<?= URLHelper::getLink($nav->getURL(), $link_params) ?>" <?= $attr_str ?>>
+                            <?= $image->asImg(['class' => 'headericon original']) ?>
+                            <br>
+                            <?= htmlReady($nav->getTitle()) ?>
+                        </a>
+                    </li>
             <? endif ?>
         <? endforeach ?>
         </ul>

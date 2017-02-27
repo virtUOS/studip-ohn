@@ -1,9 +1,9 @@
 <? if ($GLOBALS['perm']->have_perm('root')) : ?>
 <!-- Stud.IP Navigation only visible for root -->
 <div id="openStudipNavigation">
-	<div class="navigationButton"></div>
-	<div class="navigationButton"></div>
-	<div class="navigationButton"></div>
+    <div class="navigationButton"></div>
+    <div class="navigationButton"></div>
+    <div class="navigationButton"></div>
 
     <!-- Start Header -->
     <div id="flex-header">
@@ -19,28 +19,37 @@
             <ul id="barTopMenu" role="navigation">
             <? $accesskey = 0 ?>
             <? foreach (Navigation::getItem('/') as $path => $nav) : ?>
-                <? if ($nav->isVisible(true)) : ?>
+                 <? if ($nav->isVisible(true)) : ?>
                     <?
                     $accesskey_attr = '';
                     $image = $nav->getImage();
+                    $link_attributes = $nav->getLinkAttributes();
 
+                    // Add access key to link attributes
                     if ($accesskey_enabled) {
                         $accesskey = ++$accesskey % 10;
-                        $accesskey_attr = 'accesskey="' . $accesskey . '"';
-                        $image['title'] .= "  [ALT] + $accesskey";
+                        $link_attributes['accesskey'] = $accesskey;
+                        $link_attributes['title']    .= "  [ALT] + $accesskey";
                     }
 
-                    $badge_attr = '';
-                    if ($nav->hasBadgeNumber()) {
-                        $badge_attr = ' class="badge" data-badge-number="' . intval($nav->getBadgeNumber())  . '"';
+                    // Add badge number to link attributes
+                    if ($nav->getBadgeNumber()) {
+                        $link_attributes['data-badge'] = (int)$nav->getBadgeNumber();
+                    }
+
+                    // Convert link attributes array to proper attribute string
+                    $attr_str = '';
+                    foreach ($link_attributes as $key => $value) {
+                        $attr_str .= sprintf(' %s="%s"', htmlReady($key), htmlReady($value));
                     }
 
                     ?>
                     <li id="nav_<?= $path ?>"<? if ($nav->isActive()) : ?> class="active"<? endif ?>>
-                        <a href="<?= URLHelper::getLink($nav->getURL(), $link_params) ?>" title="<?= $image['title'] ?>" <?= $accesskey_attr ?><?= $badge_attr ?>>
-                           <span style="background-image: url('<?= $image['src'] ?>'); background-size: auto 32px;" class="<?= $image['class'] ?>"> </span><br>
-                           <?= htmlReady($nav->getTitle()) ?>
-                       </a>
+                        <a href="<?= URLHelper::getLink($nav->getURL(), $link_params) ?>" <?= $attr_str ?>>
+                            <?= $image->asImg(['class' => 'headericon original']) ?>
+                            <br>
+                            <?= htmlReady($nav->getTitle()) ?>
+                        </a>
                     </li>
                 <? endif ?>
             <? endforeach ?>
@@ -62,30 +71,30 @@
 
 
 
-    
-    
+
+
 
     <header aria-label="Globale Navigation" class="ohn-global">
         <nav>
             <h1 class="logo_slim">
                 <? if ($GLOBALS['user']->id == 'nobody') : ?>
                     <a href="<?= URLHelper::getUrl('plugins.php/mooc/courses/overview?cancel_login=1') ?>">
-                <? elseif (is_object($GLOBALS['user']) && $GLOBALS['user']->id != 'nobody') : ?> 
+                <? elseif (is_object($GLOBALS['user']) && $GLOBALS['user']->id != 'nobody') : ?>
                       <a href="<?= URLHelper::getUrl('dispatch.php/start') ?>">
                 <?endif ?>
                     <img src="<?= $GLOBALS['OHN_IMAGES'] ?>/header-logo.png" alt="Logo" />
                 </a>
             </h1>
-            
-            
+
+
             <? if ($GLOBALS['user']->id !== 'nobody') : ?>
-							<h2>
-						    <?=($current_page != "" ? htmlReady($current_page) : "")?>
-						    <?= $publi_hint ? '(' . htmlReady($public_hint) . ')' : '' ?>
-							</h2>
-						<? endif ?>
-  
-  
+                            <h2>
+                            <?=($current_page != "" ? htmlReady($current_page) : "")?>
+                            <?= $publi_hint ? '(' . htmlReady($public_hint) . ')' : '' ?>
+                            </h2>
+                        <? endif ?>
+
+
             <ol class="left nav-global">
                 <? if (Navigation::hasItem('/header')) : ?>
                     <? foreach (Navigation::getItem('/header') as $nav) : ?>
@@ -102,7 +111,7 @@
                                 <? endif; ?>
                                 ><?= htmlReady(strtoupper($nav->getTitle())) ?></a>
                             </li>
-                       
+
                         <? endif ?>
                     <? endforeach ?>
                 <? endif ?>
@@ -112,63 +121,63 @@
                 <li class="ohn-logo">
                     <img src="<?= $GLOBALS['OHN_IMAGES'] ?>/ohn_logo.png">
                 </li>
-                
+
                 <? if ($GLOBALS['user']->id == 'nobody') : ?>
-	                
-	                <li>
-										<a href="<?= URLHelper::getUrl('index.php?again=yes') ?>" class="login_button">Anmelden</a>
-	                </li>
-	                
-	              <? else : ?>
-	                
-	                <li class="user_menu">
-										<? if (is_object($GLOBALS['user']) && $GLOBALS['user']->id != 'nobody') : ?>
-											<a href="<?= URLHelper::getUrl('dispatch.php/start') ?>" class="user_button">
+
+                    <li>
+                                        <a href="<?= URLHelper::getUrl('index.php?again=yes') ?>" class="login_button">Anmelden</a>
+                    </li>
+
+                  <? else : ?>
+
+                    <li class="user_menu">
+                                        <? if (is_object($GLOBALS['user']) && $GLOBALS['user']->id != 'nobody') : ?>
+                                            <a href="<?= URLHelper::getUrl('dispatch.php/start') ?>" class="user_button">
                                                 <? echo $GLOBALS['auth']->auth['uname']; ?>
-											</a>
-											<a href="#" class="user_dropdown">
-												<?= Assets::img('/images/icons/16/grey/arr_1down.png'); ?>
-											</a>
-										<? endif ?>
-							
-											<ul>
-											  <? if (is_object($GLOBALS['perm']) && PersonalNotifications::isActivated() && $GLOBALS['perm']->have_perm("autor")) : ?>
-											  <? $notifications = PersonalNotifications::getMyNotifications() ?>
-											  <? $lastvisit = (int) UserConfig::get($GLOBALS['user']->id)->getValue('NOTIFICATIONS_SEEN_LAST_DATE') ?>
-											
-											  <? endif ?>
-											  <? if (Navigation::hasItem('/links')) : ?>
-											  <? foreach (Navigation::getItem('/links') as $nav) : ?>
-										      <? if ($nav->isVisible()) : ?>
-									          <li <? if ($nav->isActive()) echo 'class="active"'; ?>>
-									          <a
-									          <? if (is_internal_url($url = $nav->getURL())) : ?>
-									              href="<?= URLHelper::getLink($url, $link_params) ?>"
-									          <? else : ?>
-									              href="<?= htmlReady($url) ?>" target="_blank"
-									          <? endif ?>
-									          <? if ($nav->getDescription()): ?>
-									              title="<?= htmlReady($nav->getDescription()) ?>"
-									          <? endif; ?>
-									          ><?= htmlReady($nav->getTitle()) ?></a>
-									          </li>
-										      <? endif ?>
-											  <? endforeach ?>
-											  <? endif ?>
-											</ul>
-							            
-										</li>
-							    <? endif ?>
-          
+                                            </a>
+                                            <a href="#" class="user_dropdown">
+                                                <?= Assets::img('/images/icons/16/grey/arr_1down.png'); ?>
+                                            </a>
+                                        <? endif ?>
+
+                                            <ul>
+                                              <? if (is_object($GLOBALS['perm']) && PersonalNotifications::isActivated() && $GLOBALS['perm']->have_perm("autor")) : ?>
+                                              <? $notifications = PersonalNotifications::getMyNotifications() ?>
+                                              <? $lastvisit = (int) UserConfig::get($GLOBALS['user']->id)->getValue('NOTIFICATIONS_SEEN_LAST_DATE') ?>
+
+                                              <? endif ?>
+                                              <? if (Navigation::hasItem('/links')) : ?>
+                                              <? foreach (Navigation::getItem('/links') as $nav) : ?>
+                                              <? if ($nav->isVisible()) : ?>
+                                              <li <? if ($nav->isActive()) echo 'class="active"'; ?>>
+                                              <a
+                                              <? if (is_internal_url($url = $nav->getURL())) : ?>
+                                                  href="<?= URLHelper::getLink($url, $link_params) ?>"
+                                              <? else : ?>
+                                                  href="<?= htmlReady($url) ?>" target="_blank"
+                                              <? endif ?>
+                                              <? if ($nav->getDescription()): ?>
+                                                  title="<?= htmlReady($nav->getDescription()) ?>"
+                                              <? endif; ?>
+                                              ><?= htmlReady($nav->getTitle()) ?></a>
+                                              </li>
+                                              <? endif ?>
+                                              <? endforeach ?>
+                                              <? endif ?>
+                                            </ul>
+
+                                        </li>
+                                <? endif ?>
+
             </ol>
-         
+
         </nav>
     </header>
 
-		
+
 
 </div>
-		
+
 <!-- Ende Header -->
 
 <!-- Beginn Page -->

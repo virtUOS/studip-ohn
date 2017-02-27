@@ -8,19 +8,21 @@ if ($navigation) {
     if ($subnavigation !== null) {
         $nav_links = new NavigationWidget();
         foreach ($subnavigation as $path => $nav) {
-            if (!$nav->isVisible()) {
+           if (!$nav->isVisible()) {
                 continue;
             }
-            $image = $nav->getImage();
             $nav_id = "nav_".implode("_", preg_split("/\//", $tab_root_path, -1, PREG_SPLIT_NO_EMPTY))."_".$path;
             $link = $nav_links->addLink(
                 $nav->getTitle(),
                 URLHelper::getLink($nav->getURL()),
-                $image ? $image['src'] : null,
+                null,
                 array('id' => $nav_id)
             );
             $link->setActive($nav->isActive());
-            // TODO check $nav->isEnabled() and make link ".quit" if true "<span class="quiet">"
+            if (!$nav->isEnabled()) {
+                $link['disabled'] = true;
+                $link->addClass('quiet');
+            }
         }
         if ($nav_links->hasElements()) {
             Sidebar::get()->insertWidget($nav_links, ':first');
