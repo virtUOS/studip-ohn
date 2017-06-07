@@ -71,11 +71,17 @@
 
 
 
-
-
+    
+    
 
     <header aria-label="Globale Navigation" class="ohn-global">
         <nav>
+<div id="barBottomContainer">
+    <div id="barBottomLeft">
+
+</div>
+</div>
+
             <h1 class="logo_slim">
                 <? if ($GLOBALS['user']->id == 'nobody') : ?>
                     <a href="<?= URLHelper::getUrl('plugins.php/mooc/courses/overview?cancel_login=1') ?>">

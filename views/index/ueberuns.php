@@ -13,7 +13,20 @@
 <p>Wir w&uuml;nschen Ihnen viel Erfolg in den Onlinekursen und auf dem Weg ins Studium.</p>
 
 <p>Haben Sie Fragen? Kontaktieren Sie <a href="mailto:kontakt@ohn-kursportal.de">uns</a>!</p>
+<br/><br/>
 
+<h2>Projektorganisation</h2>
+
+<p>Das OHN-KursPortal ist ein Projekt des <a href="http://www.mwk.niedersachsen.de ">Nieders&auml;chsischen Ministeriums f&uuml;r Wissenschaft und Kultur</a> unter der Leitung der Servicestelle Offene Hochschule gGmbH (Projektleiterin: <a href="http://www.offene-hochschule-niedersachsen.de/about/team/vita-me/">Martina Emke</a>), das am 29. September 2014 an den Start ging.</p>
+
+<p><a name="_GoBack"></a>Ziel dieses innovativen Projektes ist es, beruflich qualifizierten Studieninteressierten die M&ouml;glichkeit zu geben, zeit- und raumunabh&auml;ngig an interaktiven Online-Studienvorbereitungskursen teilzunehmen. Die Themenfelder befassen sich zur Zeit mit den Bereichen „Studienorientierung“, „Mathematik“ und „Handwerkszeug f&uuml;r wissenschaftliches Arbeiten“, werden aber kontinuierlich erweitert.</p>
+
+<p>F&uuml;r die Entwicklung der technischen Plattform konnte der <a href="http://www.elan-ev.de">E-Learning Academic Network e.V.</a> (ELAN) gewonnen werden. Der ELAN e.V. hat seit vielen Jahren Erfahrung im Aufbau und in der Bereitstellung von virtuellen Lehr- Lernplattformen.</p>
+
+<p>F&uuml;r die Entwicklung der interaktiven Online-Vorbereitungskurse konnten mit dem <a href="http://www.elsa.uni-hannover.de">eLearning Service</a> der Leibniz Universit&auml;t Hannover, mit dem <a href="http://www.uni-oldenburg.de/c3l">Center f&uuml;r Lebenslanges Lernen (C3L)</a> der Carl von Ossietzky Universit&auml;t Oldenburg, der <a href="https://www.ostfalia.de/cms/de/">Ostfalia Hochschule f&uuml;r angewandte Wissenschaften</a>, der <a href="https://www.hs-osnabrueck.de/en/"> Hochschule Osnabr&uuml;ck </a> sowie dem <a href="http://www.hawk-hhg.de/hochschule">Zentrum f&uuml;r Information, Medien und Technologie der Hochschule f&uuml;r angewandte Wissenschaft und Kunst Hildesheim/Holzminden/G&ouml;ttingen</a> renommierte und kompetente Projektpartner mit langj&auml;hriger Expertise in ihren Fachthemen und im Bereich E-Learning f&uuml;r das Projekt gewonnen werden.</p>
+
+<p>Weitere Online-Studienvorbereitungskurse in den Bereichen Englisch, Selbst- und Zeitmanagement und Medienkompetenzen sind in der Entwicklung. Dar&uuml;ber hinaus bestehen Vernetzungen mit regionalen Unterst&uuml;tzungsangeboten aus der hochschulischen Bildung und der Erwachsenenbildung. Sollten Sie dazu Fragen haben, hilft Ihnen die Projektleiterin gerne weiter! &nbsp;</p>
+<br/><br/>
 <h2>Servicestelle Offene Hochschule Niedersachsen gGmbH</h2>
 
 Die Servicestelle Offene Hochschule Niedersachsen gGmbH begleitet und ber&auml;t beruflich qualifizierte Studieninteressierte bei ihrer Entscheidung f&uuml;r und auf ihrem Weg in ein Studium an einer nieders&auml;chsischen Hochschule.<br/>
@@ -53,17 +66,5 @@ Wir beraten Studieninteressierte und beantworten Fragen, die bei der &Uuml;berle
 
 <p>Die Servicestelle ist eine gemeinn&uuml;tzige Gesellschaft im Besitz des Landes <a href="http://www.niedersachsen.de">Niedersachsen</a>.</p>
 
-<br/><br/>
 
-<h2>Projektorganisation</h2>
-
-<p>Das OHN-KursPortal ist ein Projekt des <a href="http://www.mwk.niedersachsen.de ">Nieders&auml;chsischen Ministeriums f&uuml;r Wissenschaft und Kultur</a> unter der Leitung der Servicestelle Offene Hochschule gGmbH (Projektleiterin: Martina Emke), das am 29. September 2014 online gehen wird.</p>
-
-<p><a name="_GoBack"></a>Ziel dieses innovativen Projektes ist es, beruflich qualifizierten Studieninteressierten die M&ouml;glichkeit zu geben, zeit- und raumunabh&auml;ngig an interaktiven Online-Studienvorbereitungskursen teilzunehmen. Die Themenfelder befassen sich zur Zeit mit den Bereichen „Studienorientierung“, „Mathematik“ und „Handwerkszeug f&uuml;r wissenschaftliches Arbeiten“, werden aber kontinuierlich erweitert.</p>
-
-<p>F&uuml;r die Entwicklung der technischen Plattform konnte der <a href="http://www.elan-ev.de">E-Learning Academic Network e.V.</a> (ELAN) gewonnen werden. Der ELAN e.V. hat seit vielen Jahren Erfahrung im Aufbau und in der Bereitstellung von virtuellen Lehr- Lernplattformen.</p>
-
-<p>F&uuml;r die Entwicklung der interaktiven Online-Vorbereitungskurse konnten mit dem <a href="http://www.elsa.uni-hannover.de">eLearning Service</a> der Leibniz Universit&auml;t Hannover, mit dem <a href="http://www.uni-oldenburg.de/c3l">Center f&uuml;r Lebenslanges Lernen (C3L)</a> der Carl von Ossietzky Universit&auml;t Oldenburg, der <a href="https://www.ostfalia.de/cms/de/">Ostfalia Hochschule f&uuml;r angewandte Wissenschaften</a>, der <a href="https://www.hs-osnabrueck.de/en/"> Hochschule Osnabr&uuml;ck </a> sowie dem <a href="http://www.hawk-hhg.de/hochschule">Zentrum f&uuml;r Information, Medien und Technologie der Hochschule f&uuml;r angewandte Wissenschaft und Kunst Hildesheim/Holzminden/G&ouml;ttingen</a> renommierte und kompetente Projektpartner mit langj&auml;hriger Expertise in ihren Fachthemen und im Bereich E-Learning f&uuml;r das Projekt gewonnen werden.</p>
-
-<p>Weitere Online-Studienvorbereitungskurse in den Bereichen Englisch, Selbst- und Zeitmanagement und Medienkompetenzen sind in der Entwicklung. Dar&uuml;ber hinaus bestehen Vernetzungen mit regionalen Unterst&uuml;tzungsangeboten aus der hochschulischen Bildung und der Erwachsenenbildung. Sollten Sie dazu Fragen haben, hilft Ihnen die Projektleiterin gerne weiter! &nbsp;</p>
 </div>

@@ -4,6 +4,59 @@
 @import url("main.css");
 
 
+
+@media screen and (min-width: 800px) {
+    #barBottomContainer {
+        display: none !important;
+    }
+}
+/*RESPONSIVE MENU */
+@media screen and (max-width: 800px) {
+    #barBottomContainer {
+        background-color: #8DCEE6 !important;
+    }
+    #barBottomLeft::before {
+        display: none !important;
+    }
+    #barBottomLeft {
+        /*padding-top: 3px !important;*/
+    }
+    #responsive-navigation{
+        background-image: linear-gradient(to right,#666,#8DCEE6) !important;
+    }
+    #responsive-navigation input:checked + label + ul > li {
+        background-color: #8DCEE6 !important;
+    }
+    #responsive-container a {
+        color: #000 !important;
+    }
+     #layout-sidebar {
+        display: none !important;
+    }
+    #responsive-container .nav-label::before{
+        display: none !important;
+    }
+    #responsive-navigation input:checked + label + ul > li{
+        display: none !important;
+    }
+    
+    /*courseware */
+    section#courseware{
+        padding-left: 30px !important;
+    }
+    section#courseware > aside {
+        position: relative !important;
+    }
+}
+    
+
+
+
+
+ .block-content .video-wrapper.aspect-169 {
+     padding-bottom: 73% !important;
+ }
+
 body {
   background-image: none !important;
   background-color: #fff !important;

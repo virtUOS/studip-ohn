@@ -53,6 +53,8 @@
           </a>
 	      </ul>
       </div>
-      
+      <script>
+STUDIP.Navigation = <?= json_encode(studip_utf8encode(ResponsiveHelper::getNavigationArray('/course'))) ?>;
+</script>
     </div>
     <!-- Ende Footer -->
