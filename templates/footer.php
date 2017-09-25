@@ -6,7 +6,7 @@
       <ul class="footer_navigation_main">
       <? if (Navigation::hasItem('/footer')) : ?>
       <? foreach (Navigation::getItem('/footer') as $nav) : ?>
-          <? if ($nav->isVisible()) : ?>
+          <? if ($nav->isVisible() && ($nav->getURL() == str_replace("/siteinfo/show?","",$nav->getURL())) ) : ?>
               <li>
               <a
               <? if (is_internal_url($url = $nav->getURL())) : ?>
@@ -23,11 +23,11 @@
       
       <div class="footer_about">
 	      <div class="footer_logos">
-		      <a href="#">
-		      	<img src="<?= $GLOBALS['OHN_IMAGES'] ?>/ohn_logo.png" alt="OHN Logo" />
+		      <a href="http://www.offene-hochschule-niedersachsen.de/">
+		      	<img src="<?= $GLOBALS['OHN_IMAGES'] ?>/ohn-logo.svg" alt="OHN Logo" />
 		      </a>
 		      
-		      <a href="#">
+		      <a href="http://www.mwk.niedersachsen.de/startseite/">
 		      	<img src="<?= $GLOBALS['OHN_IMAGES'] ?>/nds_logo.png" alt="Niedersachsen Logo" />
 		      </a>
 	      </div>
@@ -39,12 +39,12 @@
       <div class="footer_navigation_sec">
 	      <ul>
 		      <li>
-			          <a href="<?= URLHelper::getUrl('plugins.php/ohnlayout/index/nutzungsbedingungen') ?>">
+			          <a href="<?= URLHelper::getUrl('dispatch.php/siteinfo/show/1/2') ?>">
 				    	Nutzungsbedingungen
 			      </a>
 		      </li>
 		      <li>
-           <a href="<?= URLHelper::getUrl('plugins.php/ohnlayout/index/datenschutz') ?>">
+           <a href="<?= URLHelper::getUrl('dispatch.php/siteinfo/show/1/1') ?>">
 				       Datenschutz 
 			      </a>
 		      </li>

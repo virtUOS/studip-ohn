@@ -13,7 +13,7 @@ E-Mail: info@servicestelle-ohn.de<br/>
 Internet: www.offene-hochschule-niedersachsen.de<br/>
 <br/>
 Gesch&aumlftsf&uumlhrerin: Monika Hartmann-Bischoff<br/>
-Vorsitzende des Aufsichtsrates: Dr. Gabriele Heinen-Kljaji¿ (Nieders&aumlchsische Ministerin f&uumlr Wissenschaft und Kultur) <br/>
+Vorsitzende des Aufsichtsrates: Dr. Gabriele Heinen-Kljaji&cacute (Nieders&&aumlchsische Ministerin f&uumlr Wissenschaft und Kultur) <br/>
 Alleiniger Gesellschafter: Land Niedersachsen (vertreten durch das Nieders&aumlchsische Finanzministerium)<br/>
 Projektleitung: Martina Emke<br/>
 <br/>
@@ -26,7 +26,7 @@ USt-ID-Nr. DE225080579
 ELAN e.V.<br/>
 Karlstr. 23<br/>
 26123 Oldenburg<br/>
-<a href="http://www.elan-niedersachsen.de">http://www.elan-niedersachsen.de</a>
+<a href="http://www.elan-ev.de">http://www.elan-ev.de</a>
 <br/>
 <br/>
 
@@ -44,9 +44,7 @@ Karlstr. 23<br/>
 
 <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielf&aumlltigung, Bearbeitung, Verbreitung und jede Art der Verwertung au&szligerhalb der Grenzen des Urheberrechtes bed&uumlrfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur f&uumlr den privaten, nicht kommerziellen Gebrauch gestattet. Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.
 </p>
-<h3>Nutzungsbedingungen und Datenschutz</h3>
 
-<p>Hinweise zu den <a href="http://ohn-kursportal.de/tos">Nutzungsbedingungen</a> und zum <a href="http://ohn-kursportal.de/privacy">Datenschutz</a> entnehmen Sie bitte den jeweiligen separaten Erkl&aumlrungen.</p>
 <h2>Bildnachweise</h2>
 
 soweit nicht anders angegeben:<br/>

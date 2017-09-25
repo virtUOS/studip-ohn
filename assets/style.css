@@ -721,6 +721,13 @@ dl, menu, ol, ul {
   margin: 0;
 }
 
+ul {
+    margin-left: 15px !important;
+}
+li > p {
+    font-size: 1em !important;
+}
+
 section#courseware section.active-section {
   margin-top: 40px;
 }
@@ -895,7 +902,7 @@ table {
 }
 
 #layout_footer .footer_logos {
-  width: 25%;
+  width: 35%;
   float: left;
   text-align: center;
   padding: 10px;
