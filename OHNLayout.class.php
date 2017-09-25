@@ -12,7 +12,7 @@ require 'bootstrap.php';
 
 require_once 'FactoryProxy.php';
 
-class OHNLayout extends StudIPPlugin implements SystemPlugin {
+class OHNLayout extends StudIPPlugin implements StandardPlugin, SystemPlugin {
 
     public function __construct() {
         parent::__construct();
@@ -34,7 +34,7 @@ class OHNLayout extends StudIPPlugin implements SystemPlugin {
                 PluginEngine::getURL($this, array(), 'index/ueberuns', true));
         Navigation::insertItem('/footer/ueberuns', $navigation, null);
 
-        $navigation = new Navigation('Neuigkeiten', 'http://www.offene-hochschule-niedersachsen.de/site/offene-hochschule/aktuelles/news');
+        $navigation = new Navigation('Neuigkeiten', 'http://www.offene-hochschule-niedersachsen.de/ohn/aktuelles/termine/');
         Navigation::insertItem('/footer/neugikeiten', $navigation, null);
 
         $navigation = new Navigation('FAQ',
@@ -47,12 +47,12 @@ class OHNLayout extends StudIPPlugin implements SystemPlugin {
 
 
         $navigation = new Navigation('Impressum',
-                PluginEngine::getURL($this, array(), 'index/impressum', true));
+                URLHelper::getUrl('dispatch.php/siteinfo/show/2/3'));
         Navigation::insertItem('/footer/impressum', $navigation, null);
 
         
         ##remove studip Standard navigation
-        Navigation::removeItem('/footer/siteinfo');
+        //Navigation::removeItem('/footer/siteinfo');
         Navigation::removeItem('/footer/blog');
         Navigation::removeItem('/footer/sitemap');
         Navigation::removeItem('/footer/studip');
@@ -89,6 +89,7 @@ class OHNLayout extends StudIPPlugin implements SystemPlugin {
 
     public function perform($unconsumed_path)
     {
+        $this->setupAutoload();
         require_once 'vendor/trails/trails.php';
         require_once 'app/controllers/studip_controller.php';
         require_once 'app/controllers/authenticated_controller.php';
@@ -102,4 +103,30 @@ class OHNLayout extends StudIPPlugin implements SystemPlugin {
         $dispatcher->dispatch($unconsumed_path);
 
     }
+    
+    private function setupAutoload() {
+        if (class_exists("StudipAutoloader")) {
+            StudipAutoloader::addAutoloadPath(__DIR__ . '/models');
+        } else {
+            spl_autoload_register(function ($class) {
+                include_once __DIR__ . $class . '.php';
+            });
+        }
+    }
+    
+    public function getTabNavigation($course_id)
+    {
+        global $perm;
+        if ($perm->have_studip_perm('tutor', $course_id)){
+            return array(
+                'notifications' => new Navigation(
+                    'Mail-Benachrichtigungen',
+                    PluginEngine::getURL($this, array(), 'notifications')
+                )
+            );
+        }
+    }
+    public function getInfoTemplate($course_id){}
+    public function getIconNavigation($course_id, $last_visit, $user_id){}
+    public function getNotificationObjects($course_id, $since, $user_id){}
 }
