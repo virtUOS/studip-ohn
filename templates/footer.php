@@ -23,10 +23,6 @@
       
       <div class="footer_about">
 	      <div class="footer_logos">
-		      <a href="http://www.offene-hochschule-niedersachsen.de/">
-		      	<img src="<?= $GLOBALS['OHN_IMAGES'] ?>/ohn-logo.svg" alt="OHN Logo" />
-		      </a>
-		      
 		      <a href="http://www.mwk.niedersachsen.de/startseite/">
 		      	<img src="<?= $GLOBALS['OHN_IMAGES'] ?>/nds_logo.png" alt="Niedersachsen Logo" />
 		      </a>
