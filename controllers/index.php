@@ -25,6 +25,12 @@ class IndexController extends StudipController
 
         
     }
+    
+    public function kursezumansehen_action()
+    {
+
+        
+    }
 
     public function kontakt_action()
     {

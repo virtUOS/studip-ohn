@@ -50,6 +50,10 @@ class OHNLayout extends StudIPPlugin implements StandardPlugin, SystemPlugin {
                 URLHelper::getUrl('dispatch.php/siteinfo/show/2/3'));
         Navigation::insertItem('/footer/impressum', $navigation, null);
 
+        //kurse zum Ansehen
+        $navigation = new Navigation('Beispielkurse',
+                PluginEngine::getURL($this, array(), 'index/kursezumansehen', true));
+        Navigation::insertItem('/footer/beispielkurse', $navigation, null);
         
         ##remove studip Standard navigation
         //Navigation::removeItem('/footer/siteinfo');
