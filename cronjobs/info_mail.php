@@ -49,83 +49,29 @@ class InfoMail extends CronJob
             $startdate = new DateTime($result);
             
             $interval = date_diff($startdate, $today);
-            echo "today " . $today->format('Y-m-d') . " starttermin: " . $startdate->format('Y-m-d') . " gewünschter abstand: " . (string)$entry->days_from_start . " tatsächlicher abstand: " . $interval->format('%R%a') . " /n";
-            if ($interval->format('%R%a') == (string)$entry->days_from_start){
-                
+            echo "today " . $today->format('Y-m-d') . " starttermin: " . $startdate->format('Y-m-d') . " gewünschter abstand: " . intval($entry->days_from_start) . " tatsächlicher abstand: " . intval($interval->format('%R%a')) . " /n";
+
+            if (intval($interval->format('%R%a')) == intval($entry->days_from_start)){
+                echo('hier bin ich');
                 //TODO
-                self::sendMail($entry);
+                if (self::sendMail($entry)){
                 
-                $entry->sent = date("d-m-Y");
-                $entry->store();
+                    $entry->sent = date("d-m-Y");
+                    $entry->store();
                 
                 echo "Dieser hier ist heute (". $today->format('Y-m-d') . ") fällig: Kursbeginn: ". $startdate->format('Y-m-d') . " - " . $entry->mailsubject . " /n" ;
-            } else echo "Ist noch nicht soweit: " .  $entry->mailsubject . " \n"; 
+                }
+                
+                } else echo "Ist noch nicht soweit: " .  $entry->mailsubject . " \n"; 
             
         }
-        
-      
-        /**
-        
-            $members = $course->getMembers('autor');
-            
-            //foreach TN()
-            foreach ($members as $member){
-  
-                $complete = false;
-
-                foreach ($blocks_ids as $block_id){
-                    $block = new \Mooc\DB\Block($block_id['id']);
-                    if (!$block->hasUserCompleted($member['user_id'])){
-                        $complete = false;
-                        break;
-                    } else {
-                        $complete = true;
-                    }
-                }
-              
-                    if ($complete){
-                    
-                    echo 'User '. $member['fullname'] .' hat die Inhalte des Kurses '. $course->name ." vollständig abgeschlossen: " . $ist ." von " . $soll  . "\n";
-
-                
-                    //if not already sent
-                     $stmt = $db->prepare("SELECT * FROM zertifikat_sent
-                        WHERE user_id = :user_id
-                        AND course_id = :sem_id");
-                     $stmt->execute(array('user_id' => $member['user_id'], 'sem_id' => $seminar_id));
-                     $result = $stmt->fetch(PDO::FETCH_ASSOC);
-                     
-                     if (!$result){
-                                    
-                         if(self::sendZertifikatsMail($member['fullname'], $course->name, $institut->name, $contact_mail)){
-                         
-                            $stmt = $db->prepare("INSERT INTO zertifikat_sent
-                                (user_id, course_id, mail_sent)
-                                VALUES (:user_id, :sem_id, '1')");
-                            $stmt->execute(array('user_id' => $member['user_id'], 'sem_id' => $seminar_id));
-                            
-                            echo 'Bescheinigung über Abschluss der Inhalte des Kurses '. $course->name . " durch User " . $member['fullname'] . " wurde versendet \n";
-
-                         }
-                    
-                     } else {
-                         
-                        echo 'User '. $member['fullname'] .' hat Bescheinigung über Abschluss der Inhalte des Kurses '. $course->name . " bereits erhalten. \n";
-
-                     }
-                    
-                }
-            }
-            
-            
-            //unset($course);
-        }**/
 
         return true;
     }
     
     private static function sendMail($entry){
         
+        echo 'mail senden';
         //$filepath = self::pdf_action($user, $seminar);
 
         
@@ -142,13 +88,42 @@ class InfoMail extends CronJob
             </html>
             ';
          * **/
-            $course = new Course($entry->course_id);
+            $course = new \Seminar($entry->course_id);
             $members = $course->getMembers('autor');
-            //get all Course Members and their Mailadresses
-            $empfaenger = $contact_mail;//$contact_mail; //Mailadresse
+            
+            //$empfaenger = $contact_mail;//$contact_mail; //Mailadresse
             //$absender   = "asudau@uos.de";
             $betreff    = $entry->mailsubject;
             $mailtext   = $entry->mailcontent;
+            $messaging = new messaging();
+           
+            //if (\Message::send($course->getMembers('dozent')[0], $members, $betreff, $mailtext)){
+            if($messaging->insert_message($mailtext, $members, '____%system%____', FALSE, FALSE, '1', FALSE, $betreff, TRUE)){
+                    
+                return true;
+            }
+            
+            /**
+           $ok = \StudipMail::sendMessage($members[0], $betreff, $mailtext);
+           echo $ok;
+             /**
+            $mail = new \StudipMail();
+            //get all Course Members and their Mailadresses
+            foreach($members as $member){
+                $user = new \Seminar_User($member['user_id']); 
+                $email = $user->email;
+                echo $email;
+                $mail->addRecipient($email);
+            }
+            
+           
+            echo $mail->setReplyToEmail('')
+                 ->setSenderEmail('')
+                 ->setSenderName('OHN Kursportal')
+                 ->setSubject($betreff)
+                 ->setBodyHtml($mailtext)
+                 ->setBodyHtml(strip_tags($mailtext))  
+                 ->send();
             
             /**
             $mail = new StudipMail();
