@@ -1,25 +1,25 @@
 <?php
 /**
-* preliminary_participants.php
+* close_courses.php
 *
-* @author Till Glöggler <tgloeggl@uos.de>
+* @author Annelene Sudau <asudau@uos.de>
 * @access public
 */
 require_once 'lib/classes/CronJob.class.php';
-require_once 'public/plugins_packages/virtUOS/OHNLayout/models/OHNMailEntry.class.php';
+//require_once 'public/plugins_packages/virtUOS/OHNLayout/models/OHNMailEntry.class.php';
 
 
-class InfoMail extends CronJob
+class CloseCourses extends CronJob
 {
 
     public static function getName()
     {
-        return dgettext('Mooc_Infomail', 'Mooc - automatisiert Infomails an TN verschicken');
+        return dgettext('Close_courses', 'Stuft in Moocs nach Kursende Autoren zu Lesern herunter und archiviert Kurse 10 Monate nach Ablauf');
     }
 
     public static function getDescription()
     {
-        return dgettext('Mooc_Infomail', 'Sendet gemäß der individuellen Konfiguration zu bestimmten Zeiten Infomails an Kursteilnehmer');
+        return dgettext('Close_courses', 'Stuft in Moocs nach Kursende Autoren zu Lesern herunter und archiviert Kurse 10 Monate nach Ablauf');
     }
     
     
@@ -27,130 +27,60 @@ class InfoMail extends CronJob
     public function execute($last_result, $parameters = array())
     {
         $db = DBManager::get();
-        PluginEngine::getPlugin('OHNLayout');
+        //PluginEngine::getPlugin('OHNLayout');
         
           //get datafield_id of (M)ooc Startdatum  
         $res = $db->query("SELECT datafield_id FROM datafields WHERE `name` LIKE '(M)OOC Startdatum'");
         $result_id = $res->fetchColumn();
         $mooc_start_id =  $result_id;
         
-        //get all planned mailnotifications
-        $entries = OHNMailEntry::findBySQL('sent IS NULL');
+        //get datafield_id of (M)ooc Startdatum  
+        $res = $db->query("SELECT datafield_id FROM datafields WHERE `name` LIKE '(M)OOC Dauer'");
+        $result_id = $res->fetchColumn();
+        $mooc_dauer_id =  $result_id;
         
         //get today
         $today = new DateTime(date("Y-m-d"));
         
-        //get startdate of courses for which we have found planned mailnotifications
-        //and compare planned day which is difference between mooc_start and today
-        foreach ($entries as $entry){
-            $res = $db->query("SELECT content FROM datafields_entries WHERE datafield_id LIKE '". $mooc_start_id ."' AND range_id LIKE '". $entry->course_id ."'");
-            $result = $res->fetchColumn();
-            echo var_dump($mooc_start_id) . " kursid " . $entry->course_id .  " /n";
-            $startdate = new DateTime($result);
+        $res = $db->query("SELECT range_id FROM datafields_entries WHERE datafield_id LIKE '". $mooc_start_id ."'");
+        $moocs = $res->fetchAll();
+        
+        //get mooc-Courses
+        
+        foreach($moocs as $mooc){
             
-            $interval = date_diff($startdate, $today);
-            echo "today " . $today->format('Y-m-d') . " starttermin: " . $startdate->format('Y-m-d') . " gewünschter abstand: " . intval($entry->days_from_start) . " tatsächlicher abstand: " . intval($interval->format('%R%a')) . " /n";
+            $res = $db->query("SELECT content FROM datafields_entries WHERE datafield_id LIKE '". $mooc_start_id ."' AND range_id LIKE '". $mooc[0] ."'");
+            $start = $res->fetchColumn();
+            $startdate = new DateTime($start);
+            
+            $res = $db->query("SELECT content FROM datafields_entries WHERE datafield_id LIKE '". $mooc_dauer_id ."' AND range_id LIKE '". $mooc[0] ."'");
+            $dauer = $res->fetchColumn();
+            
+            if($dauer){
+                $nr_weeks = explode(' ', $dauer)[0];
+                echo 'kursid: ' . $mooc[0];
+                $end = $startdate->modify('+' . $nr_weeks . ' weeks');
 
-            if (intval($interval->format('%R%a')) == intval($entry->days_from_start)){
-                echo('hier bin ich');
-                //TODO
-                if (self::sendMail($entry)){
-                
-                    $entry->sent = date("d-m-Y");
-                    $entry->store();
-                
-                echo "Dieser hier ist heute (". $today->format('Y-m-d') . ") fällig: Kursbeginn: ". $startdate->format('Y-m-d') . " - " . $entry->mailsubject . " /n" ;
+                $course = new \Seminar($mooc[0]);
+                $members = $course->getMembers('autor');
+         
+                //wenn der Kurs beendet ist und es noch Autoren gibt müssen diese zu Lesern heruntergestuft werden
+                if( ($end->getTimestamp() < $today->getTimestamp()) && $members) {
+                    echo "Dieser hier ist vorbei (". $course->name .") Start: " . $startdate->format('Y-m-d') . " Dauer: " . $nr_weeks . " Wochen " ;
+                    foreach($members as $member){
+                        //echo $member['user_id']. '->userID';
+                        $query = 'UPDATE seminar_user SET status = ? WHERE Seminar_id = ? AND user_id = ? AND status = ?';
+                        $statement = DBManager::get()->prepare($query);
+                        $ergebnis = $statement->execute(array('user', $mooc[0], $member['user_id'], 'autor'));  
+                        //echo $ergebnis . 'seminra: ' . $mooc[0] . ' userid: ' . $member->id;
+                    }  
+                    echo count($members) . ' Autoren erfolgreich heruntergestuft.';
                 }
-                
-                } else echo "Ist noch nicht soweit: " .  $entry->mailsubject . " \n"; 
-            
+            }
         }
-
+            
         return true;
     }
-    
-    private static function sendMail($entry){
-        
-        echo 'mail senden';
-        //$filepath = self::pdf_action($user, $seminar);
-
-        
-        /**$mailtext = '<html>
-          
-
-            <body>
-
-            <h2>Teilnahmezertifikat für ' . $user . ':</h2>
-
-            <p>Im Anhang finden Sie ein Teilnahmezertifikat für den/die Teilnehmer/in einer Onlineschulung</p>
-
-            </body>
-            </html>
-            ';
-         * **/
-            $course = new \Seminar($entry->course_id);
-            $members = $course->getMembers('autor');
-            
-            //$empfaenger = $contact_mail;//$contact_mail; //Mailadresse
-            //$absender   = "asudau@uos.de";
-            $betreff    = $entry->mailsubject;
-            $mailtext   = $entry->mailcontent;
-            $messaging = new messaging();
-           
-            //if (\Message::send($course->getMembers('dozent')[0], $members, $betreff, $mailtext)){
-            if($messaging->insert_message($mailtext, $members, '____%system%____', FALSE, FALSE, '1', FALSE, $betreff, TRUE)){
-                    
-                return true;
-            }
-            
-            /**
-           $ok = \StudipMail::sendMessage($members[0], $betreff, $mailtext);
-           echo $ok;
-             /**
-            $mail = new \StudipMail();
-            //get all Course Members and their Mailadresses
-            foreach($members as $member){
-                $user = new \Seminar_User($member['user_id']); 
-                $email = $user->email;
-                echo $email;
-                $mail->addRecipient($email);
-            }
-            
-           
-            echo $mail->setReplyToEmail('')
-                 ->setSenderEmail('')
-                 ->setSenderName('OHN Kursportal')
-                 ->setSubject($betreff)
-                 ->setBodyHtml($mailtext)
-                 ->setBodyHtml(strip_tags($mailtext))  
-                 ->send();
-            
-            /**
-            $mail = new StudipMail();
-            return $mail->addRecipient($empfaenger)
-                //->addRecipient('elmar.ludwig@uos.de', 'Elmar Ludwig', 'Cc')
-                 ->setReplyToEmail('')
-                 ->setSenderEmail('')
-                 ->setSenderName('OHN Kursportal')
-                 ->setSubject($betreff)
-                 ->setBodyHtml($mailtext)
-                 ->setBodyHtml(strip_tags($mailtext))  
-                 ->send();
-             * 
-             */
-
-    }
-    
-    
-    private function clear_string($str){
-        $search = array("ä", "ö", "ü", "ß", "Ä", "Ö",
-                "Ü", "&", "é", "á", "ó", " ");
-        $replace = array("ae", "oe", "ue", "ss", "Ae", "Oe",
-                 "Ue", "und", "e", "a", "o", "_");
-        $str = str_replace($search, $replace, $str);
-        //$str = strtolower(preg_replace("/[^a-zA-Z0-9]+/", trim($how), $str));
-        return $str;
-}
     
     
 }

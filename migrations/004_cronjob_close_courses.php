@@ -5,14 +5,14 @@
  *
  * @author Annelene Sudau <asudau@uos.de>
  */
-class CronjobMailNotifications extends Migration
+class CronjobCloseCourses extends Migration
 {
 
-    const FILENAME = 'public/plugins_packages/virtUOS/OHNLayout/cronjobs/info_mail.php';
+    const FILENAME = 'public/plugins_packages/virtUOS/OHNLayout/cronjobs/close_courses.php';
 
     public function description()
     {
-        return 'add cronjob for sending defined mailnotifications';
+        return 'add cronjob for closing ended moocs';
     }
 
     public function up()
