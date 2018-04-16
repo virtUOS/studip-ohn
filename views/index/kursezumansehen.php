@@ -1,9 +1,12 @@
 <div id="mooc-kurse">
-<h1>Kurse zum Ansehen (Achtung dies sind nur Vorlagen zum Ansehen, es handelt sich nicht um betreute Kursdurchführungen)</h1>
+<h1>Nur Kurse zum Ansehen, für Hochschulen und Erwachsenenbildung</h1>
+<h3>Arbeiten Sie an einer Hochschule oder in der Erwachsenenbildung und möchten sich die Kurse des OHN-KursPortals zunächst nur anschauen?
+        Dann haben Sie die Möglichkeit sich hier in diese Kurse einzutragen. Aber Achtung dies sind nur Vorlagen zum Ansehen, es handelt sich nicht um die regulären, betreuten Kursdurchführungen. Bei weiteren Fragen wenden Sie sich an Martina Emke
+        (martina.emke@servicestelle-ohn.de).</h3>
 
 <div class="list_item">
 	<div>
-		<img src="<?= $GLOBALS['OHN_IMAGES'] ?>/Landkarte-004-mit_Kurstitel_crop.png" />
+		<img src="/assets/images/courses/beruf_ins_studium.480x480.jpg" />
 	</div>
 	
 	<P>Der Kurs &quot;Vom
@@ -21,7 +24,7 @@
 
 <div class="list_item">
 	<div>
-		<img src="<?= $GLOBALS['OHN_IMAGES'] ?>/Trailerbild.jpg" />
+		<img src="/assets/images/courses/handwerkszeug.480x480.jpg" />
 	</div>
 	
 	<P>Der Kurs &quot;HANDWERKSZEUG
@@ -38,7 +41,7 @@
 
 <div class="list_item">
 	<div>
-	<img src="<?= $GLOBALS['OHN_IMAGES'] ?>/rechnung_b.jpg" />
+	<img src="/assets/images/courses/mathematik_vorbereitungskurs.480x480.jpg" />
 	</div>
 	
 	<P>Der &quot;Allgemeine Vorbereitungskurs Mathematik&quot;
@@ -55,7 +58,7 @@
 
 <div class="list_item">
 	<div>
-	<img src="<?= $GLOBALS['OHN_IMAGES'] ?>/TI_vorspann_gesamt_titel.png" />
+	<img src="/assets/images/courses/mathematik_informatik.480x480.jpg" />
 	</div>
 	
     <P>Der Kurs &quot;Mathematik zur Informatik&quot; zeigt anhand einiger ausgewählter Themen und Beispiele, in welchem Rahmen und in welcher Form die Mathematik in einem Informatik-Studium zum Einsatz kommt. Dabei wird die typische Sprechweise und Argumentation von Mathematikern verwendet. Exemplarisch werden Beweistechniken vorgestellt.<br>
@@ -66,7 +69,7 @@
 
 <div class="list_item">
 	<div>
-	<img src="<?= $GLOBALS['OHN_IMAGES'] ?>/preview.jpg" />
+	<img src="/assets/images/courses/mathematik_wirtschaftswissenschaften.480x480.jpg" />
 	</div>
 	
 	<P>Der Kurs &quot;Mathematik für Wirtschaftswissenschaften&quot; vermittelt zielgerichtet mathematische Grundlagenkenntnisse für den Einstieg in ein Studium der Wirtschaftswissenschaften. Inhaltlich geht es um den Umgang mit Zahlenmengen, Bruchrechnung, das Lösen von einfachen (Un-)Gleichungen mit Produkt- und Summenoperator, Analysis von Funktionen mit einer oder mehreren Variablen im Rahmen von Kurvendiskussionen, Lineare Algebra sowie Matrizenrechnung und Grundzüge der Integralrechnung.<br>
@@ -77,7 +80,7 @@
 
 <div class="list_item">
 	<div>
-	<img src="<?= $GLOBALS['OHN_IMAGES'] ?>/OHN-MA1_preview.png" />
+	<img src="/assets/images/courses/mathematik_ingenieurwissenschaften.480x480.jpg" />
 	</div>
 	
 	<P>Der Kurs &quot;Mathematik für Ingenieurwissenschaften&quot; festigt und erweitert das Fundament für die weitere Beschäftigung mit mathematischen Verfahren im Bereich der Ingenieurwissenschaften. Inhaltlich geht es um Trigonometrie, Vektorrechnung, Lineare Gleichungssysteme und Matrizen, Koeffizientenvergleich, Berechnung von Grenzwerten sowie Ableitungen und Integrale. <br>
@@ -85,4 +88,16 @@
 	</P>
 	<div class="clear"></div>
 </div>
+
+<div class="list_item">
+	<div>
+	<img src="/assets/images/courses/zeitundselbstmanagement.png" />
+	</div>
+	
+	<P>Der Kurs &quot;Zeit- und Selbstmanagement&quot; versetzt Sie in die Lage, als Studierende Ihren vielen Verpflichtungen Struktur zu verleihen, dieser ein gutes Zeitmanagement zuzuordnen und trotzdem noch genügend Raum für Erholung einzuplanen. Sie wissen, wie sie mit besonders stressigen Phasen umgehen und auch unter großem Druck effektiv arbeiten und kurzfristig Prioritäten neuordnen können. <br>
+    <a href='https://ohn-kursportal.de/plugins.php/mooc/courses/show/a560b275e5911f9b6727cd03ca1197f0?moocid=a560b275e5911f9b6727cd03ca1197f0'>Eintragen</a>
+	</P>
+	<div class="clear"></div>
+</div>
+
 </div>

@@ -49,11 +49,6 @@ class OHNLayout extends StudIPPlugin implements StandardPlugin, SystemPlugin {
         $navigation = new Navigation('Impressum',
                 URLHelper::getUrl('dispatch.php/siteinfo/show/2/3'));
         Navigation::insertItem('/footer/impressum', $navigation, null);
-
-        //kurse zum Ansehen
-        $navigation = new Navigation('Beispielkurse',
-                PluginEngine::getURL($this, array(), 'index/kursezumansehen', true));
-        Navigation::insertItem('/footer/beispielkurse', $navigation, null);
         
         ##remove studip Standard navigation
         //Navigation::removeItem('/footer/siteinfo');
@@ -66,18 +61,21 @@ class OHNLayout extends StudIPPlugin implements StandardPlugin, SystemPlugin {
             $navigation = new Navigation('Header', PluginEngine::getLink($this, array(), 'courses/overview'));
             Navigation::insertItem('/header', $navigation, null);
 
+            $navigation = new Navigation('Kurse',
+                URLHelper::getUrl('plugins.php/mooc/courses/overview'));
+            Navigation::insertItem('/header/kurse', $navigation, null);
+            
             $navigation = new Navigation('OHN-Kursportal',
                 PluginEngine::getURL($this, array(), 'index/ohnkursportal', true));
             Navigation::insertItem('/header/ohnkursportal', $navigation, null);
 
-            $navigation = new Navigation('Kurse',
-                PluginEngine::getURL($this, array(), 'index/kurse', true));
-            Navigation::insertItem('/header/kurse', $navigation, null);
-
-
             $navigation = new Navigation('Projektpartner',
                 PluginEngine::getURL($this, array(), 'index/projektpartner', true));
             Navigation::insertItem('/header/projektpartner', $navigation, null);
+            
+            $navigation = new Navigation('Hochschule/Erwachsenenbildung',
+                PluginEngine::getURL($this, array(), 'index/kursezumansehen', true));
+            Navigation::insertItem('/header/hochschule', $navigation, null);
 
         }
 
