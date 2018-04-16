@@ -287,7 +287,7 @@ select {
   }
 
   [class*="column"]+[class*="column"]:last-child {
-    float: right;
+    
   }
 
   [class*="column"]+[class*="column"].end {
