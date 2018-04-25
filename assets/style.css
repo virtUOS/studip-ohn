@@ -1326,11 +1326,8 @@ table.default .button {
 }
 
 #start_page .banner_inner {
-	background-color: rgb(247,252,253);
-	border: 1px solid #000; 
 	padding: 20px 30px;
 	margin: 80px auto; 
-	box-shadow: 10px 20px 30px grey;
 	width: 960px;
 }
 

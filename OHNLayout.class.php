@@ -69,7 +69,7 @@ class OHNLayout extends StudIPPlugin implements StandardPlugin, SystemPlugin {
                 PluginEngine::getURL($this, array(), 'index/ohnkursportal', true));
             Navigation::insertItem('/header/ohnkursportal', $navigation, null);
 
-            $navigation = new Navigation('Projektpartner',
+            $navigation = new Navigation('Projektpartnerinnen & Projektpartner',
                 PluginEngine::getURL($this, array(), 'index/projektpartner', true));
             Navigation::insertItem('/header/projektpartner', $navigation, null);
             
