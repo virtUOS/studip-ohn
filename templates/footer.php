@@ -50,7 +50,9 @@
 	      </ul>
       </div>
       <script>
-STUDIP.Navigation = <?= json_encode(studip_utf8encode(ResponsiveHelper::getNavigationArray('/course'))) ?>;
-</script>
+        <? if (Navigation::hasItem('/course')){ ?>
+            STUDIP.Navigation = <?= json_encode(studip_utf8encode(ResponsiveHelper::getNavigationArray('/course'))) ?>;
+        <? }  ?>
+    </script>
     </div>
     <!-- Ende Footer -->
