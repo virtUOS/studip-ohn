@@ -1,7 +1,7 @@
 <div id="mooc-kurse">
 <h1>Nur Kurse zum Ansehen, für Hochschulen und Erwachsenenbildung</h1>
 <h3>Arbeiten Sie an einer Hochschule oder in der Erwachsenenbildung und möchten sich die Kurse des OHN-KursPortals zunächst nur anschauen?
-        Dann haben Sie die Möglichkeit sich hier in diese Kurse einzutragen. Aber Achtung dies sind nur Vorlagen zum Ansehen, es handelt sich nicht um die regulären, betreuten Kursdurchführungen. Bei weiteren Fragen wenden Sie sich an Martina Emke
+        Dann haben Sie die Möglichkeit sich hier in diese Kurse einzutragen. Diese Kurse beinhalten alle Kursinhalte; allerdings handelt es sich nicht um reguläre, betreute Kursdurchführungen. Haben Sie weitere Fragen? Dann wenden Sie sich gerne an die Projektleiterin Martina Emke
         (martina.emke@servicestelle-ohn.de).</h3>
 
 <div class="list_item">
