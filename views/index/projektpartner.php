@@ -1,6 +1,19 @@
 <div id="mooc-projektpartner">
-<h1>Partner der OHN</h1>
+<h1>Projektpartnerinnen & Projektpartner</h1>
 
+
+<div class="list_item">
+	<div>
+		<img src="/studip/plugins_packages/virtUOS/OHNLayout/assets/images/ohn-logo_portal.png" />
+	</div>
+
+	<p>Die Servicestelle Offene Hochschule Niedersachsen gGmbH begleitet und berät 
+        beruflich qualifizierte Studieninteressierte bei ihrer Entscheidung für und 
+        auf ihrem Weg in ein Studium an einer niedersächsischen Hochschule. Mehr 
+        Informationen erhalten Sie im Bereich <a href="/plugins.php/ohnlayout/index/ueberuns">Über uns</a>.
+	</p>
+	<div class="clear"></div>
+</div>
 <div class="list_item">
 	<div>
 		<img src="<?= $GLOBALS['OHN_IMAGES'] ?>/partner-elanlogo.png" />
