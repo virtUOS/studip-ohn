@@ -29,6 +29,15 @@ class OHNLayout extends StudIPPlugin implements StandardPlugin, SystemPlugin {
 
         $GLOBALS['OHN_IMAGES'] = $this->getPluginURL() .'/assets/images';
         
+        if($GLOBALS['perm']->have_perm('root')){
+            $navigation = new Navigation('Statistiken', PluginEngine::getURL($this, array(), 'statistiken'));
+            $navigation->addSubNavigation('statistics', new Navigation('Übersicht', PluginEngine::getURL($this, array(), 'statistiken')));
+            
+            $navigation->addSubNavigation('nomail', new Navigation('Zusammenfassung nach Kurs', PluginEngine::getURL($this, array(), 'statistiken/courses')));
+            $navigation->addSubNavigation('problemdelete', new Navigation('Zusammenfassung gesamt', PluginEngine::getURL($this, array(), 'statistiken/all')));
+            Navigation::addItem('/admin/ohn-statistiken', $navigation);
+        }
+
         ##add Footer Navigation
         $navigation = new Navigation('Über uns',
                 PluginEngine::getURL($this, array(), 'index/ueberuns', true));
