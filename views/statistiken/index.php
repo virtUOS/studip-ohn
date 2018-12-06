@@ -14,7 +14,6 @@
     <? endif ?>
   <? endforeach ?>
   
-  
 <script>
     <? foreach($datafields as $field): ?>
                 <? if (is_array($field['choices']) && ($field['type'] == 'selectbox' || $field['type'] == 'text')): ?>
@@ -65,13 +64,29 @@
                 }]
             },
             options: {
-                scales: {
-                    yAxes: [{
-                        ticks: {
-                            beginAtZero:true
-                        }
-                    }]
-                }
+                responsive: true,
+                legend: {
+                  position: 'bottom',
+                },
+                animation: {
+                  animateScale: true,
+                  animateRotate: true
+                },
+                tooltips: {
+                    callbacks: {
+                      label: function(tooltipItem, data) {
+                        var dataset = data.datasets[tooltipItem.datasetIndex];
+                        var meta = dataset._meta[Object.keys(dataset._meta)[0]];
+                        var total = meta.total;
+                        var currentValue = dataset.data[tooltipItem.index];
+                        var percentage = parseFloat((currentValue/total*100).toFixed(1));
+                        return  percentage + '%';
+                      },
+                      title: function(tooltipItem, data) {
+                        return data.labels[tooltipItem[0].index];
+                      }
+                    }
+                  },
             }
         });
 <? endif ?>
