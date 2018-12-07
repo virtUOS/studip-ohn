@@ -1,11 +1,5 @@
-<?
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
- ?>
+Neuregistrierte Nutzer in 2018: <?= sizeof($mooc_user18) ?> <br>
 
  <? foreach($datafields as $field): ?>    
     <? if (is_array($field['choices']) && ($field['type'] == 'selectbox' || $field['type'] == 'text')): ?>

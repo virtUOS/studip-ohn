@@ -31,10 +31,10 @@ class OHNLayout extends StudIPPlugin implements StandardPlugin, SystemPlugin {
         
         if($GLOBALS['perm']->have_perm('root')){
             $navigation = new Navigation('Statistiken', PluginEngine::getURL($this, array(), 'statistiken'));
-            $navigation->addSubNavigation('statistics', new Navigation('Übersicht', PluginEngine::getURL($this, array(), 'statistiken')));
+            $navigation->addSubNavigation('statistics', new Navigation('Übersicht 2018', PluginEngine::getURL($this, array(), 'statistiken')));
             
-            $navigation->addSubNavigation('nomail', new Navigation('Zusammenfassung nach Kurs', PluginEngine::getURL($this, array(), 'statistiken/courses')));
-            $navigation->addSubNavigation('problemdelete', new Navigation('Zusammenfassung gesamt', PluginEngine::getURL($this, array(), 'statistiken/all')));
+            $navigation->addSubNavigation('course', new Navigation('KursteilnehmerInnen pro Kurs', PluginEngine::getURL($this, array(), 'statistiken/courses')));
+            $navigation->addSubNavigation('all', new Navigation('Zusammenfassung gesamt', PluginEngine::getURL($this, array(), 'statistiken/all')));
             Navigation::addItem('/admin/ohn-statistiken', $navigation);
         }
 

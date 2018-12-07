@@ -32,18 +32,29 @@ class StatistikenController extends StudipController
     }
     
     function index_action(){
+        Navigation::activateItem('/admin/ohn-statistiken/statistics');
         //$this->datafields = DataField::findBySQL('object_type = :user AND name NOT IN (\'Hinweise\', \'Gruende\')', [':user' => 'user']);
         $this->datafields = $this->parseRegistrationFormFields();
         
         $mooc_userdomain = new UserDomain('mooc-user');
         $this->mooc_user = $mooc_userdomain->getUsers();
+        $this->mooc_user18 = [];
+     
+        foreach($this->mooc_user as $user_id){
+            $usermodel = User::find($user_id);
+            if($usermodel->mkdate > 1514764800) {
+                $this->mooc_user18[] = $user_id;
+            } 
+
+        }
+        
         $this->data = [];
         
         foreach($this->datafields as $field){
             if ($field['fieldName'] != 'geschlecht'){
                 $data_fieldentries = [];
                 foreach ($field['choices'] as $choice){
-                    $entries = DatafieldEntryModel::findBySQL('datafield_id = :datafield_id AND content = :choice', [':datafield_id' => $field['fieldName'], ':choice' => trim($choice)]);
+                    $entries = DatafieldEntryModel::findBySQL('mkdate > 1514764800 AND datafield_id = :datafield_id AND content = :choice', [':datafield_id' => $field['fieldName'], ':choice' => trim($choice)]);
                     $data_fieldentries[trim($choice)] = sizeof($entries);
                 }
                 $this->data[$field['fieldName']] = $data_fieldentries;
@@ -55,12 +66,14 @@ class StatistikenController extends StudipController
     }
     
     function courses_action(){
+        Navigation::activateItem('/admin/ohn-statistiken/course');
         $this->courses = self::getOHN_courses();
         
         $this->datafields = DataField::findBySQL('object_type = :user', [':user' => 'user']);
         $mooc_userdomain = new UserDomain('mooc-user');
         $this->mooc_user = $mooc_userdomain->getUsers();
         $this->users = [];
+        $this->coursemembers = [];
         
         foreach($this->mooc_user as $user){
             foreach($this->datafields as $field){
@@ -68,6 +81,59 @@ class StatistikenController extends StudipController
                 $this->users[$user][] = $entry->content;
                 
             }
+        }
+        
+        foreach ($this->courses as $course_entry){
+            $course = Course::find($course_entry['Seminar_id']);
+            $this->coursemembers[$course->id] = sizeof($course->getMembersWithStatus('autor'));
+        }
+    }
+    
+    function all_action(){
+        Navigation::activateItem('/admin/ohn-statistiken/all');
+        $mooc_userdomain = new UserDomain('mooc-user');
+        $this->mooc_user = $mooc_userdomain->getUsers();
+        $this->mooc_user18 = [];
+        $this->mooc_user17 = [];
+        
+        $this->kursteilnahmen_gesamt18_all = 0;
+        $this->kursteilnahmen_gesamt18 = [];
+        $this->kursteilnahmen_gesamt18[1] = 0;
+        $this->kursteilnahmen_gesamt18[2] = 0;
+        $this->kursteilnahmen_gesamt18[3] = 0;
+        $this->kursteilnahmen_gesamt18[4] = 0;
+        $this->kursteilnahmen_gesamt17_all = 0;
+        $this->kursteilnahmen_gesamt17 = [];
+        $this->kursteilnahmen_gesamt17[1] = 0;
+        $this->kursteilnahmen_gesamt17[2] = 0;
+        $this->kursteilnahmen_gesamt17[3] = 0;
+        $this->kursteilnahmen_gesamt17[4] = 0;
+        
+        
+        foreach($this->mooc_user as $user_id){
+            $usermodel = User::find($user_id);
+            $kursteilnahmen = sizeof($usermodel->course_memberships);
+            if($usermodel->mkdate > 1514764800) {
+                $this->kursteilnahmen_gesamt18_all += $kursteilnahmen;
+                $this->kursteilnahmen_gesamt18[$kursteilnahmen] ++;
+            } else if ($usermodel->mkdate > 1483228800){
+                $this->kursteilnahmen_gesamt17_all += $kursteilnahmen;
+                $this->kursteilnahmen_gesamt17[$kursteilnahmen] ++;
+            }
+        
+        }
+        ksort($this->kursteilnahmen_gesamt18);
+        ksort($this->kursteilnahmen_gesamt17);
+        
+        
+        foreach($this->mooc_user as $user_id){
+            $usermodel = User::find($user_id);
+            if($usermodel->mkdate > 1514764800) {
+                $this->mooc_user18[] = $user_id;
+            } else if ($usermodel->mkdate > 1483228800){
+                $this->mooc_user17[] = $user_id;
+            }
+        
         }
     }
     
@@ -89,17 +155,17 @@ class StatistikenController extends StudipController
     }
     
     public static function getOHN_courses(){
-        $course_number_prefixe = ['AM' => 'Allgemeiner Vorbereitungskurs Mathematik',
-            'BS' => 'Vom Beruf ins Studium', 
-            'HS' => 'Handwerkszeug Studieren',
-            'MI' => 'Mathematik für Informatik',
-            'MING' => 'Mathematik für Ingenieure',
-            'MW' => 'Mathematik für Wirtschaftswissenschaften',
-            'ZSM' => 'Zeit- und Selbstmanagement'];
+        $course_number_prefixe = ['AM1' => 'Allgemeiner Vorbereitungskurs Mathematik',
+            'BS1' => 'Vom Beruf ins Studium', 
+            'HS1' => 'Handwerkszeug Studieren',
+            'MI1' => 'Mathematik für Informatik',
+            'MING1' => 'Mathematik für Ingenieure',
+            'MW1' => 'Mathematik für Wirtschaftswissenschaften',
+            'ZSM1' => 'Zeit- und Selbstmanagement'];
         
         $db         = DBManager::get();
         $return_arr = [];
-        $query      = "SELECT Seminar_id, VeranstaltungsNummer, Name FROM seminare WHERE VeranstaltungsNummer RLIKE (:prefixe) ORDER BY VeranstaltungsNummer ASC";
+        $query      = "SELECT Seminar_id, VeranstaltungsNummer, Name FROM seminare WHERE VeranstaltungsNummer RLIKE (:prefixe) ORDER BY start_time DESC";
         $statement  = $db->prepare($query);
         $statement->execute([':prefixe' => implode('|', array_keys($course_number_prefixe))]);
         $courses = $statement->fetchAll(PDO::FETCH_ASSOC);
@@ -155,14 +221,6 @@ class StatistikenController extends StudipController
                 } elseif ($fieldName !== 'terms_of_service') {
                     // skip the field if it is not recognised
                     continue;
-                }
-
-                if ($fieldName === 'geschlecht') {
-                    $choices = array(
-                        _mooc('unbekannt'),
-                        _mooc('männlich'),
-                        _mooc('weiblich'),
-                    );
                 }
 
                 $parsedFields[] = array(

@@ -7,21 +7,19 @@
  */
 
 ?>
-
+Die Kursnummer steht jeweils für das Jahr und den Monat: 1805 = Mai 2018
 <table class='default'>
     <tr>
         <th>Kurs</th>
-        <? foreach($datafields as $field): ?>
-            <th><?= $field->name ?></th>
-        <? endforeach ?>
+            <th>Anzahl TN</th>
     </tr>
 <? foreach ($courses as $course) : ?>
 
     <tr>
         <td><?= $course['Name'] . ' - ' . $course['VeranstaltungsNummer'] ?></td>
-        <? foreach ($user as $field) : ?>
-        <td><?= $field ?></td>
-        <? endforeach ?>
+        <td><?= $coursemembers[$course['Seminar_id']] ?></td>
+
+        
     </tr>
 <? endforeach ?>
 </table>
